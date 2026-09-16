@@ -15,7 +15,7 @@ filters:
   - course
 
 website:
-  repo-url: https://github.com/glkarpov/ptms_mds_hse_26
+  repo-url: https://github.com/glkarpov/ptms_gsb_26
   repo-branch: main
   repo-actions: [edit]
   search: 
