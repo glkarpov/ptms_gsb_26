@@ -1,0 +1,3 @@
+[submodule "atoms"]
+	path = atoms
+	url = git@github.com:glkarpov/ptms_blocks.git
