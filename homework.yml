@@ -1,1 +1,19 @@
-[]
+- title: Классическая и комбинаторная вероятность.
+  number: 1
+  problem_sets: /assignments/ha_topic_1.pdf
+
+- title: Геометрическая вероятность.
+  number: 2
+  problem_sets: /assignments/ha_topic_2.pdf
+
+- title: Условная вероятность. Полная вероятность. Теорема Байеса.
+  number: 3
+  problem_sets: /assignments/ha_topic_3.pdf
+
+- title: Дискретные случайные величины и их характеристики.
+  number: 4
+  problem_sets: /assignments/ha_topic_4.pdf
+
+- title: Распределения Бернулли, биномиальное, Пуассона.
+  number: 5
+  problem_sets: /assignments/ha_topic_5.pdf

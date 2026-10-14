@@ -1,3 +1,27 @@
-- title: Вероятностное пространство. Классическая вероятность.
+- title: Вероятностное пространство. Классическая, комбинаторная вероятность.
   number: 1
   lectures: /lectures/lecture_1.pdf
+
+- title: Условная вероятность. Независимость событий.
+  number: 2
+  lectures: /lectures/lecture_2.pdf
+
+- title: Геометрическая вероятность. Полная вероятность. Формула Байеса.
+  number: 3
+  lectures: /lectures/lecture_3.pdf
+
+- title: Дискретные случайные величины. Математическое ожидание.
+  number: 4
+  lectures: /lectures/lecture_4.pdf
+
+- title: Дисперсия. Функция распределения. Бернулли, биномиальное, Пуассон.
+  number: 5
+  lectures: /lectures/lecture_5.pdf
+
+- title: Многомерные дискретные случайные величины.
+  number: 6
+  lectures: /lectures/lecture_6.pdf
+
+- title: Линейные комбинации случайных величин. Ковариация и корреляция.
+  number: 7
+  lectures: /lectures/lecture_7.pdf

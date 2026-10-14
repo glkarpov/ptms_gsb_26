@@ -57,10 +57,13 @@ main a:hover {
   text-decoration: underline !important;
 }
 
-/* Button-style links */
+/* Hub links on the home page */
 #quarto-content a[href*="program.md"],
+#quarto-content a[href*="homework.md"],
 .quarto-document-content a[href*="program.md"],
-main a[href*="program.md"] {
+.quarto-document-content a[href*="homework.md"],
+main a[href*="program.md"],
+main a[href*="homework.md"] {
   display: inline-block !important;
   padding: 1rem 2rem !important;
   background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%) !important;
@@ -70,12 +73,15 @@ main a[href*="program.md"] {
   font-weight: 600 !important;
   transition: all 0.3s ease !important;
   box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3) !important;
-  margin: 2rem 0 !important;
+  margin: 0.5rem 0 !important;
 }
 
 #quarto-content a[href*="program.md"]:hover,
+#quarto-content a[href*="homework.md"]:hover,
 .quarto-document-content a[href*="program.md"]:hover,
-main a[href*="program.md"]:hover {
+.quarto-document-content a[href*="homework.md"]:hover,
+main a[href*="program.md"]:hover,
+main a[href*="homework.md"]:hover {
   transform: translateY(-2px) !important;
   box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4) !important;
   color: white !important;

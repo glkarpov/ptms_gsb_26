@@ -1,8 +1,8 @@
 ---
-title: 📚 Материалы
+title: Лекции
 listing:
   - id: materials
-    contents: 
+    contents:
       - materials.yml
     template: materials_template.ejs
     page-size: 50
@@ -12,19 +12,14 @@ listing:
       - consultations.yml
     template: consultations_template.ejs
     page-size: 20
-
-  - id: homework
-    contents:
-      - homework.yml
-    template: homework_template.ejs
-    page-size: 20
 ---
+
+## Лекции
 
 :::{#materials}
 :::
 
-:::{#consultations}
-:::
+## Консультации
 
-:::{#homework}
+:::{#consultations}
 :::

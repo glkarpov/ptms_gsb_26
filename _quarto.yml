@@ -5,6 +5,7 @@ project:
     - "*.mp4"
     - "*.txt"
     - "*.csv"
+    - "assignments/*.pdf"
 
 lang: ru
 
