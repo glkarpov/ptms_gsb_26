@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-number','listing-lectures',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-number','listing-section','listing-lectures',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-title","listing-number","listing-lectures"],
+      searchColumns: ["listing-title","listing-number","listing-section","listing-lectures"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -196,43 +196,49 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="лекции">Лекции</h2>
 <div id="listing-materials" class="quarto-listing quarto-listing-container-custom">
 
-    <h3 class="anchored">Занятие 1</h3>
+    <h4 class="materials-section anchored">Основы вероятности</h4>
+
+    <h3 class="anchored">Лекция 1</h3>
     <p>
         <a href="./lectures/lecture_1.pdf">📄 Презентация</a>
     </p>
     <p>Вероятностное пространство. Классическая, комбинаторная вероятность.</p>
 
-    <h3 class="anchored">Занятие 2</h3>
+    <h3 class="anchored">Лекция 2</h3>
     <p>
         <a href="./lectures/lecture_2.pdf">📄 Презентация</a>
     </p>
     <p>Условная вероятность. Независимость событий.</p>
 
-    <h3 class="anchored">Занятие 3</h3>
+    <h3 class="anchored">Лекция 3</h3>
     <p>
         <a href="./lectures/lecture_3.pdf">📄 Презентация</a>
     </p>
     <p>Геометрическая вероятность. Полная вероятность. Формула Байеса.</p>
 
-    <h3 class="anchored">Занятие 4</h3>
+    <h4 class="materials-section anchored">Одномерные дискретные случайные величины</h4>
+
+    <h3 class="anchored">Лекция 4</h3>
     <p>
         <a href="./lectures/lecture_4.pdf">📄 Презентация</a>
     </p>
     <p>Дискретные случайные величины. Математическое ожидание.</p>
 
-    <h3 class="anchored">Занятие 5</h3>
+    <h3 class="anchored">Лекция 5</h3>
     <p>
         <a href="./lectures/lecture_5.pdf">📄 Презентация</a>
     </p>
     <p>Дисперсия. Функция распределения. Бернулли, биномиальное, Пуассон.</p>
 
-    <h3 class="anchored">Занятие 6</h3>
+    <h4 class="materials-section anchored">Многомерные случайные величины</h4>
+
+    <h3 class="anchored">Лекция 6</h3>
     <p>
         <a href="./lectures/lecture_6.pdf">📄 Презентация</a>
     </p>
     <p>Многомерные дискретные случайные величины.</p>
 
-    <h3 class="anchored">Занятие 7</h3>
+    <h3 class="anchored">Лекция 7</h3>
     <p>
         <a href="./lectures/lecture_7.pdf">📄 Презентация</a>
     </p>
@@ -240,19 +246,15 @@ window.Quarto = {
 
 <div class="listing-no-matching d-none">Нет подходящих элементов</div>
 </div>
+
+
+
 </section>
-<section id="консультации" class="level2">
-<h2 class="anchored" data-anchor-id="консультации">Консультации</h2>
-<div id="listing-consultations" class="quarto-listing quarto-listing-container-custom">
+
+<div class="quarto-listing quarto-listing-container-custom" id="listing-consultations">
 
 <div class="listing-no-matching d-none">Нет подходящих элементов</div>
-</div>
-
-
-
-</section>
-
-</main> <!-- /main -->
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
