@@ -88,6 +88,22 @@ main a[href*="homework.md"]:hover {
   text-decoration: none !important;
 }
 
+/* Section dividers inside lectures listing */
+.materials-section {
+  margin-top: 1.75rem !important;
+  margin-bottom: 0.75rem !important;
+  padding-top: 0.85rem !important;
+  border-top: 1px dashed rgba(99, 102, 241, 0.35) !important;
+  border-bottom: none !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  color: #64748b !important;
+}
+
+#listing-materials .materials-section:first-child {
+  margin-top: 0.5rem !important;
+}
+
 /* Listing sections styling */
 #listing-team .quarto-grid-item.card,
 #listing-materials .quarto-grid-item.card {

@@ -18,8 +18,3 @@ listing:
 
 :::{#materials}
 :::
-
-## Консультации
-
-:::{#consultations}
-:::

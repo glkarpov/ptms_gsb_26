@@ -1,6 +1,15 @@
 ```{=html}
-<% for (const item of items) { %>
-    <h3>Занятие <%= item.number %></h3>
+<%
+  var prevSection = null;
+  for (const item of items) {
+    if (item.section && item.section !== prevSection) {
+      prevSection = item.section;
+%>
+    <h4 class="materials-section"><%= item.section %></h4>
+<%
+    }
+%>
+    <h3>Лекция <%= item.number %></h3>
     <p>
         <% 
             var links = [];
