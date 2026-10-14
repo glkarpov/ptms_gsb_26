@@ -1,11 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ptms-gsb-26.glebkarpov.com/homework.html</loc>
+    <lastmod>2026-10-13T19:39:13.593Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ptms-gsb-26.glebkarpov.com/atoms/probability/total_bayes.html</loc>
+    <lastmod>2026-10-11T13:28:28.650Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ptms-gsb-26.glebkarpov.com/atoms/probability/mrv_linear_combs.html</loc>
+    <lastmod>2026-10-14T12:54:10.087Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ptms-gsb-26.glebkarpov.com/atoms/probability/independency.html</loc>
+    <lastmod>2026-10-11T13:28:28.647Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ptms-gsb-26.glebkarpov.com/atoms/probability/mdrv_marginal.html</loc>
+    <lastmod>2026-10-12T19:57:16.323Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ptms-gsb-26.glebkarpov.com/atoms/probability/conditional.html</loc>
+    <lastmod>2026-10-11T13:28:28.644Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ptms-gsb-26.glebkarpov.com/atoms/probability/drv_variance.html</loc>
+    <lastmod>2026-10-11T13:28:28.646Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ptms-gsb-26.glebkarpov.com/atoms/probability/mdrv_conditional.html</loc>
+    <lastmod>2026-10-13T06:05:41.316Z</lastmod>
+  </url>
+  <url>
     <loc>https://ptms-gsb-26.glebkarpov.com/program.html</loc>
-    <lastmod>2026-09-16T19:29:23.267Z</lastmod>
+    <lastmod>2026-10-13T19:39:13.546Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ptms-gsb-26.glebkarpov.com/atoms/probability/binom.html</loc>
+    <lastmod>2026-10-12T14:18:36.532Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ptms-gsb-26.glebkarpov.com/atoms/probability/drv_cdf.html</loc>
+    <lastmod>2026-10-12T15:19:12.863Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ptms-gsb-26.glebkarpov.com/atoms/probability/mrv_funcs.html</loc>
+    <lastmod>2026-10-12T19:57:16.324Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ptms-gsb-26.glebkarpov.com/atoms/probability/mdrv_joint.html</loc>
+    <lastmod>2026-10-11T13:28:28.647Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ptms-gsb-26.glebkarpov.com/atoms/probability/bern.html</loc>
+    <lastmod>2026-10-11T13:28:28.643Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ptms-gsb-26.glebkarpov.com/atoms/probability/drv_intro.html</loc>
+    <lastmod>2026-10-11T13:28:28.646Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ptms-gsb-26.glebkarpov.com/atoms/probability/drv_expectation.html</loc>
+    <lastmod>2026-10-11T13:28:28.645Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ptms-gsb-26.glebkarpov.com/atoms/probability/poisson.html</loc>
+    <lastmod>2026-10-14T12:54:10.088Z</lastmod>
   </url>
   <url>
     <loc>https://ptms-gsb-26.glebkarpov.com/index.html</loc>
-    <lastmod>2026-09-16T19:29:23.265Z</lastmod>
+    <lastmod>2026-10-13T19:43:14.509Z</lastmod>
   </url>
 </urlset>

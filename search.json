@@ -1,16 +1,898 @@
 [
   {
+    "objectID": "homework.html",
+    "href": "homework.html",
+    "title": "Листы рекомендованных задач",
+    "section": "",
+    "text": "Лист задач 1\n    \n        📄 Задачи\n    \n    Классическая и комбинаторная вероятность.\n\n    Лист задач 2\n    \n        📄 Задачи\n    \n    Геометрическая вероятность.\n\n    Лист задач 3\n    \n        📄 Задачи\n    \n    Условная вероятность. Полная вероятность. Теорема Байеса.\n\n    Лист задач 4\n    \n        📄 Задачи\n    \n    Дискретные случайные величины и их характеристики.\n\n    Лист задач 5\n    \n        📄 Задачи\n    \n    Распределения Бернулли, биномиальное, Пуассона.\n\nНет подходящих элементов"
+  },
+  {
+    "objectID": "atoms/probability/total_bayes.html",
+    "href": "atoms/probability/total_bayes.html",
+    "title": "",
+    "section": "",
+    "text": "Концепция условной вероятности неразрывно связана со следующей, концепцией полной вероятности.\nРассмотрим зафиксированное пространство \\(\\left( \\Omega, \\mathcal{F}, P \\right)\\). Назовем разбиением \\(\\Omega\\) коллекцию событий \\(\\{ B_k, \\, k \\in I \\}\\), таких что \\(B_i \\cap B_j = \\varnothing\\) при \\(i \\neq j\\) и \\(\\bigcup B_i = \\Omega\\).\nВдобавок, рассмотрим какое-то другое событие \\(B\\), которое пересекается с какими-то событиями из разбиения, но не обязано пересекаться со всеми."
+  },
+  {
+    "objectID": "atoms/probability/total_bayes.html#полная-вероятность",
+    "href": "atoms/probability/total_bayes.html#полная-вероятность",
+    "title": "",
+    "section": "",
+    "text": "Концепция условной вероятности неразрывно связана со следующей, концепцией полной вероятности.\nРассмотрим зафиксированное пространство \\(\\left( \\Omega, \\mathcal{F}, P \\right)\\). Назовем разбиением \\(\\Omega\\) коллекцию событий \\(\\{ B_k, \\, k \\in I \\}\\), таких что \\(B_i \\cap B_j = \\varnothing\\) при \\(i \\neq j\\) и \\(\\bigcup B_i = \\Omega\\).\nВдобавок, рассмотрим какое-то другое событие \\(B\\), которое пересекается с какими-то событиями из разбиения, но не обязано пересекаться со всеми."
+  },
+  {
+    "objectID": "atoms/probability/total_bayes.html#полная-вероятность-1",
+    "href": "atoms/probability/total_bayes.html#полная-вероятность-1",
+    "title": "",
+    "section": "Полная вероятность",
+    "text": "Полная вероятность\n\n\n\n\n\n\nTheorem\n\n\n\n\n\nЕсли \\(\\{B_1, B_2, \\ldots \\,  \\}\\) - разбиение \\(\\Omega\\), c \\(P(B_i) &gt; 0 \\; \\forall i\\), то:\n\\[\n    \\boxed{P(A) = \\sum \\limits_{i} P(A|B_i) P(B_i), \\, \\forall A \\in \\mathcal{F}}   \n\\]\nДоказательство. Заметим, что мы можем реконструировать событие \\(A\\) из его частичек-пересечений со всеми \\(B_i\\): \\(A = \\bigcup\\limits_{i} (A \\cap B_i)\\). Эти кусочки \\(\\{ A \\cap B_i  \\}\\) попарно не пересекаются, как и оригинальные элементы разбиения. Поэтому далее можем применить свойство аддитивности вероятности:\n\\[\\begin{gather*}\nP(A) = P \\left( \\bigcup\\limits_{i} (A \\cap B_i) \\right) \\\\\n= \\sum \\limits_{i} P \\left(A \\cap B_i \\right)\n= \\sum \\limits_{i} P(A|B_i) P(B_i)\n\\end{gather*}\\]"
+  },
+  {
+    "objectID": "atoms/probability/total_bayes.html#теорема-байеса",
+    "href": "atoms/probability/total_bayes.html#теорема-байеса",
+    "title": "",
+    "section": "Теорема Байеса",
+    "text": "Теорема Байеса\n\n\n\n\n\n\nTheorem\n\n\n\n\n\nПусть \\(\\{B_1, B_2, \\ldots \\,  \\}\\) - разбиение \\(\\Omega\\), c \\(P(B_i) &gt; 0 \\; \\forall i\\). Тогда для любого события \\(A\\), \\(P(A) &gt; 0\\), справедливо:\n\\[\n    \\boxed{ P(B_j|A) = \\frac{P(A|B_j)P(B_j)}{\\sum \\limits_{i} P(A|B_i) P(B_i)} }\n\\]\nДоказательство.\nОпираемся на то, что \\(P(X \\cap Y)\\) может быть выражена через разные условные вероятности: \\[\nP(X \\cap Y) = P(X|Y) P(Y) = P(Y|X) P(X).\n\\]\nПрименим это к условию\n\\[\nP(B_j|A) = \\frac{P(A|B_j) P(B_j)}{P(A)},\n\\]\nгде \\(P(A) = \\sum \\limits_{i} P(A|B_i) P(B_i)\\) как полная вероятность."
+  },
+  {
+    "objectID": "atoms/probability/total_bayes.html#пример-1",
+    "href": "atoms/probability/total_bayes.html#пример-1",
+    "title": "",
+    "section": "Пример 1",
+    "text": "Пример 1\nВероятность победы лошади в скачках равна \\(0.3\\), если погода сухая, и \\(0.5\\) если идет дождь. Прогноз погоды дает вероятность дождя \\(40\\%\\)."
+  },
+  {
+    "objectID": "atoms/probability/total_bayes.html#пример-1-1",
+    "href": "atoms/probability/total_bayes.html#пример-1-1",
+    "title": "",
+    "section": "Пример 1",
+    "text": "Пример 1\nОбозначим: \\(R\\) — дождь, \\(D\\) — сухая погода; \\(W\\)/\\(L\\) — победа/проигрыш; \\(A\\) — победа лошади.\n\n\n\n\n\n\\(A = (A \\cap B_1) \\cup (A \\cap B_2)\\)\n\\(\\begin{aligned}[t]\n  A \\cap B_1 &= \\{(W,R)\\} \\\\\n  A \\cap B_2 &= \\{(W,D)\\}\n\\end{aligned}\\)\n\\(\\begin{aligned}[t]\n  P(A) &= P(A \\cap B_1) + P(A \\cap B_2) \\\\\n        &= P(A\\mid B_1)P(B_1) + P(A\\mid B_2)P(B_2)\n\\end{aligned}\\)"
+  },
+  {
+    "objectID": "atoms/probability/total_bayes.html#пример-1-2",
+    "href": "atoms/probability/total_bayes.html#пример-1-2",
+    "title": "",
+    "section": "Пример 1",
+    "text": "Пример 1\n\n\\(P(A \\mid D) = 0.3\\), \\(P(A \\mid R) = 0.5\\), \\(P(R) = 0.4\\), \\(P(D) = 0.6\\).\n\\(P(A) = P(A \\mid D) P(D) + P(A \\mid R) P(R) = 0.3 \\cdot 0.6 + 0.5 \\cdot 0.4 = 0.38\\)\n\\[\nP(D \\mid \\bar{A}) = \\frac{P(\\bar{A} \\mid D) P(D)}{P(\\bar{A})} = \\frac{0.7 \\cdot 0.6}{1 - 0.38} \\approx 0.677\n\\]"
+  },
+  {
+    "objectID": "atoms/probability/total_bayes.html#пример-2-false-positives",
+    "href": "atoms/probability/total_bayes.html#пример-2-false-positives",
+    "title": "",
+    "section": "Пример 2 (False positives)",
+    "text": "Пример 2 (False positives)\n\nРедкое, но опасное заболевание имеет распространенность \\(1\\) на \\(10^5\\) в общей популяции. Существует диагностический тест, но он несовершенен. Если у человека есть заболевание, тест положительный с вероятностью \\(0.9\\); если нет - тест положительный с вероятностью \\(\\frac{1}{20}\\). Тест дал положительный результат. Какова вероятность того, что у человека есть заболевание?"
+  },
+  {
+    "objectID": "atoms/probability/total_bayes.html#пример-2-false-positives-1",
+    "href": "atoms/probability/total_bayes.html#пример-2-false-positives-1",
+    "title": "",
+    "section": "Пример 2 (False positives)",
+    "text": "Пример 2 (False positives)\nОбозначим: \\(H\\) — healthy, \\(I\\) — ill; \\(A\\) — положительный результат теста (detected positive).\n\n\n\n\n\n\\(A = (A \\cap B_1) \\cup (A \\cap B_2)\\)\n\\(\\begin{aligned}[t]\n  A \\cap B_1 &= \\{(+,I)\\} \\\\\n  A \\cap B_2 &= \\{(+,H)\\}\n\\end{aligned}\\)\n\\(\\begin{aligned}[t]\n  P(A) &= P(A \\cap B_1) + P(A \\cap B_2) \\\\\n        &= P(A\\mid B_1)P(B_1) + P(A\\mid B_2)P(B_2)\n\\end{aligned}\\)"
+  },
+  {
+    "objectID": "atoms/probability/total_bayes.html#пример-2-false-positives-2",
+    "href": "atoms/probability/total_bayes.html#пример-2-false-positives-2",
+    "title": "",
+    "section": "Пример 2 (False positives)",
+    "text": "Пример 2 (False positives)\n\n\\(P(I) = 10^{-5}\\), \\(P(A \\mid I) = 0.9\\), \\(P(A \\mid H) = \\frac{1}{20}\\).\n\\(P(A) = P(A \\mid I) P(I) + P(A \\mid H) P(H) = 0.9 \\cdot 10^{-5} + 0.05 \\cdot (1 - 10^{-5}) = 0.0500085\\)\n\\[\n  P(I \\mid A) = \\frac{P(A \\mid I) P(I)}{P(A)} = \\frac{0.9 \\cdot 10^{-5}}{0.0500085} \\approx 0.0002\n\\]"
+  },
+  {
+    "objectID": "atoms/probability/mrv_linear_combs.html#линейная-комбинация-случайных-величин-1",
+    "href": "atoms/probability/mrv_linear_combs.html#линейная-комбинация-случайных-величин-1",
+    "title": "",
+    "section": "Линейная комбинация случайных величин",
+    "text": "Линейная комбинация случайных величин\n\nНо дисперсия - это уже совсем другая история…"
+  },
+  {
+    "objectID": "atoms/probability/mrv_linear_combs.html#ковариация-и-независимость",
+    "href": "atoms/probability/mrv_linear_combs.html#ковариация-и-независимость",
+    "title": "",
+    "section": "Ковариация и независимость",
+    "text": "Ковариация и независимость\n Если \\(X\\) и \\(Y\\) - независимые случайные величины, то \\(E[XY] = E[X]E[Y]\\)\n\n\n\n\n\n\nProof\n\n\n\n\n\n\n\nИспользуем определение независимости величин: \\[\\begin{equation*}\n    \\forall x_i, \\; \\forall y_j: \\; P_X \\left( X=x_i \\right) P_Y \\left( Y = y_j \\right) = P(\\{X=x_i \\} \\cap \\{ Y=y_j\\}) = P \\left( X=x_i, Y=y_j \\right)\n\\end{equation*}\\] \\[\\begin{align*}\n    E[XY] &= \\sum \\limits_{i=1}^{n} \\sum \\limits_{j=1}^{m} x_i y_j P(X = x_i, Y = y_j) = \\sum \\limits_{i=1}^{n} \\sum \\limits_{j=1}^{m} x_i y_j P_X(x_i) P_Y(y_j) \\\\ &= \\sum \\limits_{i=1}^{n} x_i P_X(x_i) \\sum \\limits_{j=1}^{m} y_j P_Y(y_j) = E[X] E[Y].\n\\end{align*}\\]\n\n\n\n\n\nБудьте внимательны: обратное утверждение неверно!"
+  },
+  {
+    "objectID": "atoms/probability/mrv_linear_combs.html#логика-высказываний-независимость-и-ковариация",
+    "href": "atoms/probability/mrv_linear_combs.html#логика-высказываний-независимость-и-ковариация",
+    "title": "",
+    "section": "Логика высказываний: независимость и ковариация",
+    "text": "Логика высказываний: независимость и ковариация\nСлучай \\(C\\) используем для детекции зависимости: \\(Cov \\neq 0\\) \\(\\Rightarrow\\) зависимы."
+  },
+  {
+    "objectID": "atoms/probability/mrv_linear_combs.html#корреляция",
+    "href": "atoms/probability/mrv_linear_combs.html#корреляция",
+    "title": "",
+    "section": "Корреляция",
+    "text": "Корреляция"
+  },
+  {
+    "objectID": "atoms/probability/mrv_linear_combs.html#пример",
+    "href": "atoms/probability/mrv_linear_combs.html#пример",
+    "title": "",
+    "section": "Пример:",
+    "text": "Пример:\nСлучайный вектор \\((X,Y)\\) принимает значения \\((-1,1)\\) и \\((2,-2)\\) с вероятностями \\(\\frac{2}{3}\\) и \\(\\frac{1}{3}\\)."
+  },
+  {
+    "objectID": "atoms/probability/mrv_linear_combs.html#решение-задачи",
+    "href": "atoms/probability/mrv_linear_combs.html#решение-задачи",
+    "title": "",
+    "section": "Решение задачи",
+    "text": "Решение задачи\n\n1. Маргинальные функции вероятности\nДля \\(X\\): \\[\\begin{align*}\nP(X=-1) &= \\sum\\limits_{j} P(X=-1, Y=y_j) = \\frac{2}{3} + 0 = \\frac{2}{3} \\\\\nP(X=2) &= \\sum\\limits_{j} P(X=2, Y=y_j) = 0 + \\frac{1}{3} = \\frac{1}{3}\n\\end{align*}\\]\nДля \\(Y\\): \\[\\begin{align*}\nP(Y=1) &= \\sum\\limits_{i} P(X=x_i, Y=1) = \\frac{2}{3} + 0 = \\frac{2}{3} \\\\\nP(Y=-2) &= \\sum\\limits_{i} P(X=x_i, Y=-2) = 0 + \\frac{1}{3} = \\frac{1}{3}\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "atoms/probability/mrv_linear_combs.html#пример-1",
+    "href": "atoms/probability/mrv_linear_combs.html#пример-1",
+    "title": "",
+    "section": "Пример",
+    "text": "Пример\n\nПроверка независимости\nПроверим условие независимости для пары: \\[\\begin{align*}\nP(X=-1, Y=1) &= \\frac{2}{3} \\quad \\text{и} \\quad P(X=-1)P(Y=1) = \\frac{2}{3} \\cdot \\frac{2}{3} = \\frac{4}{9} \\neq \\frac{2}{3}\n\\end{align*}\\]\nОтвет: \\(X\\) и \\(Y\\) не независимы."
+  },
+  {
+    "objectID": "atoms/probability/mrv_linear_combs.html#пример-2",
+    "href": "atoms/probability/mrv_linear_combs.html#пример-2",
+    "title": "",
+    "section": "Пример",
+    "text": "Пример\n\nКовариация и корреляция\nСначала найдем математические ожидания: \\[\\begin{align*}\nE[X] &= (-1) \\cdot \\frac{2}{3} + 2 \\cdot \\frac{1}{3} = 0 \\\\\nE[Y] &= 1 \\cdot \\frac{2}{3} + (-2) \\cdot \\frac{1}{3} = 0\n\\end{align*}\\]\nТеперь найдем \\(E[XY]\\): \\[\\begin{align*}\nE[XY] &= (-1) \\cdot 1 \\cdot \\frac{2}{3} + 2 \\cdot (-2) \\cdot \\frac{1}{3} = -\\frac{2}{3} - \\frac{4}{3} = -2\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "atoms/probability/mrv_linear_combs.html#пример-3",
+    "href": "atoms/probability/mrv_linear_combs.html#пример-3",
+    "title": "",
+    "section": "Пример",
+    "text": "Пример\nКовариация: \\[\\begin{align*}\nCov(X,Y) &= E[XY] - E[X]E[Y] = -2 - 0 \\cdot 0 = -2\n\\end{align*}\\]\nДля корреляции найдем дисперсии: \\[\\begin{align*}\nE[X^2] &= (-1)^2 \\cdot \\frac{2}{3} + 2^2 \\cdot \\frac{1}{3} = \\frac{2}{3} + \\frac{4}{3} = 2 \\\\\nVar[X] &= E[X^2] - (E[X])^2 = 2 - 0 = 2\n\\end{align*}\\]\n\\[\\begin{align*}\nE[Y^2] &= 1^2 \\cdot \\frac{2}{3} + (-2)^2 \\cdot \\frac{1}{3} = \\frac{2}{3} + \\frac{4}{3} = 2 \\\\\nVar[Y] &= E[Y^2] - (E[Y])^2 = 2 - 0 = 2\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "atoms/probability/mrv_linear_combs.html#пример-4",
+    "href": "atoms/probability/mrv_linear_combs.html#пример-4",
+    "title": "",
+    "section": "Пример",
+    "text": "Пример\nКорреляция: \\[\\begin{align*}\nCorr(X,Y) &= \\frac{Cov(X,Y)}{\\sqrt{Var[X]Var[Y]}} = \\frac{-2}{\\sqrt{2 \\cdot 2}} = \\frac{-2}{2} = -1\n\\end{align*}\\]\nКорреляция равна \\(-1\\), что означает полную отрицательную линейную зависимость между \\(X\\) и \\(Y\\) (здесь \\(Y = -X\\))."
+  },
+  {
+    "objectID": "atoms/probability/mrv_linear_combs.html#пример-зависимости-при-нулевой-корреляции",
+    "href": "atoms/probability/mrv_linear_combs.html#пример-зависимости-при-нулевой-корреляции",
+    "title": "",
+    "section": "Пример зависимости при нулевой корреляции",
+    "text": "Пример зависимости при нулевой корреляции\nСлучайный вектор \\((X,Y)\\) равновероятно принимает одно из четырёх значений на окружности: \\[\n(2,0),\\quad (0,2),\\quad (-2,0),\\quad (0,-2),\n\\] каждое с вероятностью \\(\\frac{1}{4}\\).\nНайдите коэффициент корреляции и проверьте случайные величины на зависимость."
+  },
+  {
+    "objectID": "atoms/probability/mrv_linear_combs.html#пример-решение",
+    "href": "atoms/probability/mrv_linear_combs.html#пример-решение",
+    "title": "",
+    "section": "Пример: решение",
+    "text": "Пример: решение\nМаргинальные распределения:\n\\(E[X] = (-2)\\cdot\\frac{1}{4} + 0\\cdot\\frac{1}{2} + 2\\cdot\\frac{1}{4} = 0\\), \\(E[Y] = (-2)\\cdot\\frac{1}{4} + 0\\cdot\\frac{1}{2} + 2\\cdot\\frac{1}{4} = 0\\).\nВо всех исходах произведение \\(XY = 0\\), поэтому \\(E[XY] = 0\\) и \\[\nCov(X,Y) = E[XY] - E[X]E[Y] = 0 \\implies Corr(X,Y) = 0.\n\\]\nЗависимость — проверка через произведение маргинальных вероятностей, например для пары \\((0,-2)\\): \\[\nP(X=0, Y=-2) = \\frac{1}{4}, \\qquad\nP(X=0)\\,P(Y=-2) = \\frac{1}{2}\\cdot\\frac{1}{4} = \\frac{1}{8} \\neq \\frac{1}{4}.\n\\] Значит \\(X\\) и \\(Y\\) зависимы (хотя \\(Corr(X,Y)=0\\))."
+  },
+  {
+    "objectID": "atoms/probability/independency.html#независимость-событий-1",
+    "href": "atoms/probability/independency.html#независимость-событий-1",
+    "title": "",
+    "section": "Независимость событий",
+    "text": "Независимость событий"
+  },
+  {
+    "objectID": "atoms/probability/independency.html#независимость-событий-2",
+    "href": "atoms/probability/independency.html#независимость-событий-2",
+    "title": "",
+    "section": "Независимость событий",
+    "text": "Независимость событий"
+  },
+  {
+    "objectID": "atoms/probability/independency.html#независимость-событий-3",
+    "href": "atoms/probability/independency.html#независимость-событий-3",
+    "title": "",
+    "section": "Независимость событий",
+    "text": "Независимость событий\n\nНаблюдаем: \\(P(B) = P(B|R)\\), \\(P(R) = P(R|B)\\). Коэффициент ожидания этих событий a.k.a. вероятность не зависит от того, происходит ли одновременно другое событие или нет. Мы называем такие события независимыми.\nБолее формально, чтобы называть \\(A\\) и \\(B\\) независимыми, должно выполняться: \\[\n  P(A | B) = P(A) \\text{ И } P(B | A) = P(B), \\text{ при } P(A), \\, P(B) &gt; 0.\n\\]"
+  },
+  {
+    "objectID": "atoms/probability/independency.html#независимость-событий-4",
+    "href": "atoms/probability/independency.html#независимость-событий-4",
+    "title": "",
+    "section": "Независимость событий",
+    "text": "Независимость событий\n\nЕсли немного поработаем с идеей о независимости, получим более удобное определение: \\[\n  P(A) = P(A|B) = \\frac{P \\left( A \\cap B \\right)}{P(B)} \\longrightarrow P \\left( A \\cap B \\right) = P(A) \\cdot P(B)\n\\]\n\n\n\n\n\n\n\nDefinition\n\n\n\n\n\nСобытия \\(A\\) и \\(B\\) из одного вероятностного пространства \\(\\left(\\Omega, \\mathcal{F}, P \\right)\\) называются , если: \\[\n    P \\left( A \\cap B \\right) = P(A) \\cdot P(B),\n\\] и зависимыми в обратном случае."
+  },
+  {
+    "objectID": "atoms/probability/independency.html#непересекающиеся-независимые",
+    "href": "atoms/probability/independency.html#непересекающиеся-независимые",
+    "title": "",
+    "section": "Непересекающиеся — независимые?",
+    "text": "Непересекающиеся — независимые?"
+  },
+  {
+    "objectID": "atoms/probability/independency.html#непересекающиеся-независимые-1",
+    "href": "atoms/probability/independency.html#непересекающиеся-независимые-1",
+    "title": "",
+    "section": "Непересекающиеся — независимые?",
+    "text": "Непересекающиеся — независимые?"
+  },
+  {
+    "objectID": "atoms/probability/independency.html#непересекающиеся-независимые-2",
+    "href": "atoms/probability/independency.html#непересекающиеся-независимые-2",
+    "title": "",
+    "section": "Непересекающиеся — независимые?",
+    "text": "Непересекающиеся — независимые?"
+  },
+  {
+    "objectID": "atoms/probability/independency.html#логика-высказываний-про-независимость",
+    "href": "atoms/probability/independency.html#логика-высказываний-про-независимость",
+    "title": "",
+    "section": "Логика высказываний про независимость",
+    "text": "Логика высказываний про независимость"
+  },
+  {
+    "objectID": "atoms/probability/mdrv_marginal.html#маргинальная-функция-вероятности-1",
+    "href": "atoms/probability/mdrv_marginal.html#маргинальная-функция-вероятности-1",
+    "title": "",
+    "section": "Маргинальная функция вероятности",
+    "text": "Маргинальная функция вероятности"
+  },
+  {
+    "objectID": "atoms/probability/mdrv_marginal.html#маргинальная-функция-вероятности-2",
+    "href": "atoms/probability/mdrv_marginal.html#маргинальная-функция-вероятности-2",
+    "title": "",
+    "section": "Маргинальная функция вероятности",
+    "text": "Маргинальная функция вероятности\n\nПример\nСовместная функция вероятности \\(X\\) и \\(Y\\) задана следующим образом:\nНайдите маргинальные функции вероятности для каждой случайной величины."
+  },
+  {
+    "objectID": "atoms/probability/mdrv_marginal.html#маргинальная-функция-вероятности-3",
+    "href": "atoms/probability/mdrv_marginal.html#маргинальная-функция-вероятности-3",
+    "title": "",
+    "section": "Маргинальная функция вероятности",
+    "text": "Маргинальная функция вероятности\n\nРешение\nДля \\(X\\): \\[\\begin{align*}\nP(X=1) &= \\sum\\limits_{j=1}^{2} P(X=1, Y=j) = \\frac{1}{8} + \\frac{1}{4} = \\frac{3}{8} \\\\\nP(X=2) &= \\sum\\limits_{j=1}^{2} P(X=2, Y=j) = \\frac{1}{8} + \\frac{1}{2} = \\frac{5}{8}\n\\end{align*}\\]\nДля \\(Y\\): \\[\\begin{align*}\nP(Y=1) &= \\sum\\limits_{i=1}^{2} P(X=i, Y=1) = \\frac{1}{8} + \\frac{1}{8} = \\frac{1}{4} \\\\\nP(Y=2) &= \\sum\\limits_{i=1}^{2} P(X=i, Y=2) = \\frac{1}{4} + \\frac{1}{2} = \\frac{3}{4}\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "atoms/probability/conditional.html#мысленный-эксперимент-1",
+    "href": "atoms/probability/conditional.html#мысленный-эксперимент-1",
+    "title": "",
+    "section": "Мысленный эксперимент",
+    "text": "Мысленный эксперимент"
+  },
+  {
+    "objectID": "atoms/probability/conditional.html#мысленный-эксперимент-2",
+    "href": "atoms/probability/conditional.html#мысленный-эксперимент-2",
+    "title": "",
+    "section": "Мысленный эксперимент",
+    "text": "Мысленный эксперимент"
+  },
+  {
+    "objectID": "atoms/probability/conditional.html#мысленный-эксперимент-3",
+    "href": "atoms/probability/conditional.html#мысленный-эксперимент-3",
+    "title": "",
+    "section": "Мысленный эксперимент",
+    "text": "Мысленный эксперимент"
+  },
+  {
+    "objectID": "atoms/probability/conditional.html#мысленный-эксперимент-4",
+    "href": "atoms/probability/conditional.html#мысленный-эксперимент-4",
+    "title": "",
+    "section": "Мысленный эксперимент",
+    "text": "Мысленный эксперимент"
+  },
+  {
+    "objectID": "atoms/probability/conditional.html#мысленный-эксперимент-5",
+    "href": "atoms/probability/conditional.html#мысленный-эксперимент-5",
+    "title": "",
+    "section": "Мысленный эксперимент",
+    "text": "Мысленный эксперимент"
+  },
+  {
+    "objectID": "atoms/probability/conditional.html#мысленный-эксперимент-6",
+    "href": "atoms/probability/conditional.html#мысленный-эксперимент-6",
+    "title": "",
+    "section": "Мысленный эксперимент",
+    "text": "Мысленный эксперимент"
+  },
+  {
+    "objectID": "atoms/probability/conditional.html#мысленный-эксперимент-7",
+    "href": "atoms/probability/conditional.html#мысленный-эксперимент-7",
+    "title": "",
+    "section": "Мысленный эксперимент",
+    "text": "Мысленный эксперимент"
+  },
+  {
+    "objectID": "atoms/probability/conditional.html#мысленный-эксперимент-8",
+    "href": "atoms/probability/conditional.html#мысленный-эксперимент-8",
+    "title": "",
+    "section": "Мысленный эксперимент",
+    "text": "Мысленный эксперимент"
+  },
+  {
+    "objectID": "atoms/probability/conditional.html#мысленный-эксперимент-9",
+    "href": "atoms/probability/conditional.html#мысленный-эксперимент-9",
+    "title": "",
+    "section": "Мысленный эксперимент",
+    "text": "Мысленный эксперимент"
+  },
+  {
+    "objectID": "atoms/probability/conditional.html#условная-вероятность",
+    "href": "atoms/probability/conditional.html#условная-вероятность",
+    "title": "",
+    "section": "Условная вероятность",
+    "text": "Условная вероятность"
+  },
+  {
+    "objectID": "atoms/probability/conditional.html#условная-вероятность-1",
+    "href": "atoms/probability/conditional.html#условная-вероятность-1",
+    "title": "",
+    "section": "Условная вероятность",
+    "text": "Условная вероятность\n\n\n\n\n\n\n\nDefinition\n\n\n\n\n\nУсловная вероятность пересчитывается через обычную вероятность в виде: \\[\n  P(A | B) = \\frac{P(A \\cap B)}{P(B)}, \\quad\n  P(B | A) = \\frac{P(A \\cap B)}{P(A)}\n\\]\n\n\n\n\n\n\n\n\n\n\nФормула Байеса\n\n\n\n\\[\n  P(A | B) = \\frac{P(B | A) \\cdot P(A)}{P(B)}\n\\]"
+  },
+  {
+    "objectID": "atoms/probability/conditional.html#условная-вероятность-2",
+    "href": "atoms/probability/conditional.html#условная-вероятность-2",
+    "title": "",
+    "section": "Условная вероятность",
+    "text": "Условная вероятность\nПри каждом зафиксированном значении параметра (условия) \\(P(X|K)\\) - отдельная самостоятельная вероятностная функция. Для каждой справедливы указанные ранее свойства:\n\n\\(\\forall X, K \\in \\mathcal{F}: \\; \\; 0 \\leq P(X|K) \\leq 1\\)\n\\(\\forall K \\in \\mathcal{F}: \\; \\; P(\\Omega|K) = 1\\). Easy to show: \\(P(\\Omega|K) = \\frac{P(\\Omega \\cap K)}{P(K)} = (K \\subseteq \\Omega) = \\frac{P(K)}{P(K)} = 1\\)\nАддитивность вероятности: \\[\n  \\forall X, \\, Y, \\, K \\in \\mathcal{F}: \\, X \\cap Y = \\varnothing, \\, P\\left((X \\cup Y) | K \\right) = P(X|K) + P(Y|K)\n\\]"
+  },
+  {
+    "objectID": "atoms/probability/drv_variance.html",
+    "href": "atoms/probability/drv_variance.html",
+    "title": "",
+    "section": "",
+    "text": "В вероятностном мире интерпретация картинки такая, что может быть две случайные величины с одинаковым математическим ожиданием, но с кардинально разными значениями.\nПредставьте, что в одном случае вы кидаете монетку с привязанными численными значениями \\(+1\\) и \\(-1\\) (например, выигрыш - проигрыш), а в другом ту же монетку, но с привязанными значениями уже \\(+1000\\) и \\(-1000\\). Математическое ожидание в обоих случаях будет \\(0\\), но сравните магнитуды возможных значений!\nЭто помогает нам понять мотивацию введения новой характеристики для случайной величины - дисперсии - которая сможет охарактеризовать степень разброса значений случайной величины."
+  },
+  {
+    "objectID": "atoms/probability/drv_variance.html#физическое-отступление-2",
+    "href": "atoms/probability/drv_variance.html#физическое-отступление-2",
+    "title": "",
+    "section": "",
+    "text": "В вероятностном мире интерпретация картинки такая, что может быть две случайные величины с одинаковым математическим ожиданием, но с кардинально разными значениями.\nПредставьте, что в одном случае вы кидаете монетку с привязанными численными значениями \\(+1\\) и \\(-1\\) (например, выигрыш - проигрыш), а в другом ту же монетку, но с привязанными значениями уже \\(+1000\\) и \\(-1000\\). Математическое ожидание в обоих случаях будет \\(0\\), но сравните магнитуды возможных значений!\nЭто помогает нам понять мотивацию введения новой характеристики для случайной величины - дисперсии - которая сможет охарактеризовать степень разброса значений случайной величины."
+  },
+  {
+    "objectID": "atoms/probability/drv_variance.html#примеры-для-интуиции",
+    "href": "atoms/probability/drv_variance.html#примеры-для-интуиции",
+    "title": "",
+    "section": "Примеры для интуиции",
+    "text": "Примеры для интуиции\n\n\nСистема A: \\(\\Omega_X = \\{0,1,2\\}\\).\n\\(E[X] = 0\\cdot 0.25 + 1\\cdot 0.5 + 2\\cdot 0.25 = 1\\)\n\\(Y = f(X) = (X - E[X])^2 = (X-1)^2\\):\n\\(E[Y] = 0\\cdot 0.5 + 1\\cdot 0.5 = 0.5\\)\n\nСистема B: \\(\\Omega_X = \\{-1,1,3\\}\\).\n\\(E[X] = (-1)\\cdot 0.25 + 1\\cdot 0.5 + 3\\cdot 0.25 = 1\\)\n\\(Y = f(X) = (X - E[X])^2 = (X-1)^2\\):\n\\(E[Y] = 0\\cdot 0.5 + 4\\cdot 0.5 = 2\\)"
+  },
+  {
+    "objectID": "atoms/probability/drv_variance.html#характеристики-случайной-величины",
+    "href": "atoms/probability/drv_variance.html#характеристики-случайной-величины",
+    "title": "",
+    "section": "Характеристики случайной величины",
+    "text": "Характеристики случайной величины\n\nДисперсия\n\nДисперсия случайной величины - это число, константа, которое помогает нам понять степень разброса потенциальных значений случайной величины относительно среднего.\n\n\n\n\n\n\nDefinition\n\n\n\n\n\nДля случайной величины \\(X\\) её дисперсия обозначается \\(Var[X]\\) (Variance) и определяется как: \\[\n  D[X] = Var[X] =  E\\left[ \\left( X - E[X] \\right)^2 \\right]\n\\]\n\n\n\n\nФормально говоря, это математическое ожидание новой случайной величины: \\[\n  Y = g(X) = \\left( X - E[X]\\right)^2,\n\\] описывающей квадрат расстояния между значением случайной величины \\(X\\) и её математическим ожиданием."
+  },
+  {
+    "objectID": "atoms/probability/drv_variance.html#характеристики-с.в.-дисперсия",
+    "href": "atoms/probability/drv_variance.html#характеристики-с.в.-дисперсия",
+    "title": "",
+    "section": "Характеристики С.В.: Дисперсия",
+    "text": "Характеристики С.В.: Дисперсия\n\n\n\n\n\n\nВычисление дисперсии\n\n\n\nСуществует упрощенная формула: \\[\\begin{gather*}\n    E\\left[ \\left( X - E[X] \\right)^2 \\right] = E\\left[  X^2 - 2XE[X] + (E[X])^2  \\right] = \\\\\n    = E[X^2] - E\\left[2 E[X] X \\right] + E \\left[ (E[X])^2 \\right] = E[X^2] - 2 E[X] E[X] + (E[X])^2 = \\\\  \\boxed{E[X^2] - (E[X])^2}\n\\end{gather*}\\]\nВ процессе мы используем свойство линейности математического ожидания, а также знание того, что \\(E[X]\\) - это константа, при этом \\(E[c] = c\\), то есть \\(E \\left[  E[X] \\right] = E[X]\\)."
+  },
+  {
+    "objectID": "atoms/probability/drv_variance.html#свойства-дисперсии",
+    "href": "atoms/probability/drv_variance.html#свойства-дисперсии",
+    "title": "",
+    "section": "Свойства дисперсии",
+    "text": "Свойства дисперсии"
+  },
+  {
+    "objectID": "atoms/probability/drv_variance.html#дисперсия-пример",
+    "href": "atoms/probability/drv_variance.html#дисперсия-пример",
+    "title": "",
+    "section": "Дисперсия: пример",
+    "text": "Дисперсия: пример\nПосчитаем дисперсию на примере нашей задачи. Считаем уже известным, что \\(E[X] = 1.2\\)."
+  },
+  {
+    "objectID": "atoms/probability/mdrv_conditional.html",
+    "href": "atoms/probability/mdrv_conditional.html",
+    "title": "",
+    "section": "",
+    "text": "Обратите внимание\n\n\n\nСобытие \\(\\{X=x_i \\} \\cap \\{ Y=y_j\\}\\) содержит ровно один элементарный исход - пару \\(\\{(x_i, y_j)\\}\\), поэтому искомая вероятность пересечения становится значением совместной функции вероятности этой пары."
+  },
+  {
+    "objectID": "atoms/probability/mdrv_conditional.html#условная-вероятность-для-многомерных-величин",
+    "href": "atoms/probability/mdrv_conditional.html#условная-вероятность-для-многомерных-величин",
+    "title": "",
+    "section": "",
+    "text": "Обратите внимание\n\n\n\nСобытие \\(\\{X=x_i \\} \\cap \\{ Y=y_j\\}\\) содержит ровно один элементарный исход - пару \\(\\{(x_i, y_j)\\}\\), поэтому искомая вероятность пересечения становится значением совместной функции вероятности этой пары."
+  },
+  {
+    "objectID": "atoms/probability/mdrv_conditional.html#условная-вероятность-для-многомерных-величин-1",
+    "href": "atoms/probability/mdrv_conditional.html#условная-вероятность-для-многомерных-величин-1",
+    "title": "",
+    "section": "Условная вероятность для многомерных величин",
+    "text": "Условная вероятность для многомерных величин\nУсловие «вырезает» в \\(\\Omega_{X,Y}\\), оригинальном пространстве элементарных исходов, новое множество допустимых исходов.\n\n\nУсловие \\(Y = y_j\\) (столбец):\n\nУсловие \\(X = x_i\\) (строка):"
+  },
+  {
+    "objectID": "atoms/probability/mdrv_conditional.html#условная-вероятность-для-многомерных-величин-2",
+    "href": "atoms/probability/mdrv_conditional.html#условная-вероятность-для-многомерных-величин-2",
+    "title": "",
+    "section": "Условная вероятность для многомерных величин",
+    "text": "Условная вероятность для многомерных величин\n\nПример\nСовместная функция вероятности \\(X\\) и \\(Y\\) задана следующим образом:\nВычислите условную функцию вероятности \\(X\\) при условии \\(Y = i\\), \\(i = 1, 2\\)."
+  },
+  {
+    "objectID": "atoms/probability/mdrv_conditional.html#условная-вероятность-для-многомерных-величин-3",
+    "href": "atoms/probability/mdrv_conditional.html#условная-вероятность-для-многомерных-величин-3",
+    "title": "",
+    "section": "Условная вероятность для многомерных величин",
+    "text": "Условная вероятность для многомерных величин\n\nРешение\nСначала маргиналы для \\(Y\\) (знаменатели): \\[\\begin{equation*}\nP(Y=1) = \\frac{1}{8} + \\frac{1}{8} = \\frac{1}{4}, \\qquad\nP(Y=2) = \\frac{1}{4} + \\frac{1}{2} = \\frac{3}{4}.\n\\end{equation*}\\]\n\\(P(X \\mid Y=1)\\): \\[\\begin{align*}\nP(X=1|Y=1) &= \\frac{P(X=1, Y=1)}{P(Y=1)} = \\frac{\\frac{1}{8}}{\\frac{1}{4}} = \\frac{1}{2} \\\\\nP(X=2|Y=1) &= \\frac{P(X=2, Y=1)}{P(Y=1)} = \\frac{\\frac{1}{8}}{\\frac{1}{4}} = \\frac{1}{2}\n\\end{align*}\\]\nПри \\(Y=1\\) величина \\(X\\) равновероятна."
+  },
+  {
+    "objectID": "atoms/probability/mdrv_conditional.html#условная-вероятность-для-многомерных-величин-4",
+    "href": "atoms/probability/mdrv_conditional.html#условная-вероятность-для-многомерных-величин-4",
+    "title": "",
+    "section": "Условная вероятность для многомерных величин",
+    "text": "Условная вероятность для многомерных величин\n\nРешение\n\\(P(X \\mid Y=2)\\): \\[\\begin{align*}\nP(X=1|Y=2) &= \\frac{P(X=1, Y=2)}{P(Y=2)} = \\frac{\\frac{1}{4}}{\\frac{3}{4}} = \\frac{1}{3} \\\\\nP(X=2|Y=2) &= \\frac{P(X=2, Y=2)}{P(Y=2)} = \\frac{\\frac{1}{2}}{\\frac{3}{4}} = \\frac{2}{3}\n\\end{align*}\\]\nПри \\(Y=2\\) чаще встречается \\(X=2\\)."
+  },
+  {
+    "objectID": "atoms/probability/mdrv_conditional.html#независимость-пары-случайных-величин",
+    "href": "atoms/probability/mdrv_conditional.html#независимость-пары-случайных-величин",
+    "title": "",
+    "section": "Независимость пары случайных величин",
+    "text": "Независимость пары случайных величин\n\nНапоминание: независимые события"
+  },
+  {
+    "objectID": "atoms/probability/mdrv_conditional.html#независимость-пары-случайных-величин-1",
+    "href": "atoms/probability/mdrv_conditional.html#независимость-пары-случайных-величин-1",
+    "title": "",
+    "section": "Независимость пары случайных величин",
+    "text": "Независимость пары случайных величин\n\nРассмотрим каждую возможную пару событий:\n\n\n\n\n\n\n\nDefinition\n\n\n\n\n\nЕсли каждая пара \\(\\{ X=x_i \\}\\) и \\(\\{ Y = y_j \\}\\) оказываются независимыми событиями, то мы говорим, что случайные величины \\(X\\) и \\(Y\\) независимы.\n\\[\\begin{equation*}\n    \\forall x_i, \\; \\forall y_j: \\; P\\{ X=x_i \\} \\cdot P\\{ Y = y_j \\} = P(\\{X=x_i \\} \\cap \\{ Y=y_j\\}) = P(\\{ X=x_i, Y=y_j \\}).\n\\end{equation*}\\]"
+  },
+  {
+    "objectID": "atoms/probability/mdrv_conditional.html#независимость-случайных-величин",
+    "href": "atoms/probability/mdrv_conditional.html#независимость-случайных-величин",
+    "title": "",
+    "section": "Независимость случайных величин",
+    "text": "Независимость случайных величин\n\nПример\nСовместная функция вероятности \\(X\\) и \\(Y\\) задана следующим образом:"
+  },
+  {
+    "objectID": "atoms/probability/mdrv_conditional.html#независимость-случайных-величин-1",
+    "href": "atoms/probability/mdrv_conditional.html#независимость-случайных-величин-1",
+    "title": "",
+    "section": "Независимость случайных величин",
+    "text": "Независимость случайных величин\n\nРешение\n\nМаргинальные функции вероятности\n\nДля \\(X\\): \\[\\begin{align*}\nP(X=1) &= \\sum\\limits_{j=1}^{2} P(X=1, Y=j) = \\frac{1}{8} + \\frac{1}{4} = \\frac{3}{8} \\\\\nP(X=2) &= \\sum\\limits_{j=1}^{2} P(X=2, Y=j) = \\frac{1}{8} + \\frac{1}{2} = \\frac{5}{8}\n\\end{align*}\\]\nДля \\(Y\\): \\[\\begin{align*}\nP(Y=1) &= \\sum\\limits_{i=1}^{2} P(X=i, Y=1) = \\frac{1}{8} + \\frac{1}{8} = \\frac{1}{4} \\\\\nP(Y=2) &= \\sum\\limits_{i=1}^{2} P(X=i, Y=2) = \\frac{1}{4} + \\frac{1}{2} = \\frac{3}{4}\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "atoms/probability/mdrv_conditional.html#независимость-случайных-величин-2",
+    "href": "atoms/probability/mdrv_conditional.html#независимость-случайных-величин-2",
+    "title": "",
+    "section": "Независимость случайных величин",
+    "text": "Независимость случайных величин\n\nРешение\n\nПроверка независимости\n\nПроверим условие независимости для пары: \\[\\begin{align*}\nP(X=1, Y=1) &= \\frac{1}{8} \\quad \\text{и} \\quad P(X=1)P(Y=1) = \\frac{3}{8} \\cdot \\frac{1}{4} = \\frac{3}{32} \\neq \\frac{1}{8}\n\\end{align*}\\]\nВывод: \\(X\\) и \\(Y\\) не независимы."
+  },
+  {
     "objectID": "program.html",
     "href": "program.html",
-    "title": "📚 Материалы",
+    "title": "Лекции",
     "section": "",
-    "text": "Занятие 1\n    \n        📄 Презентация\n    \n    Вероятностное пространство. Классическая вероятность.\n\nНет подходящих элементов\n\n\n\nНет подходящих элементов\n\n\n\nНет подходящих элементов"
+    "text": "📄 Презентация\n    \n    Вероятностное пространство. Классическая, комбинаторная вероятность.\n\n    \n    \n        📄 Презентация\n    \n    Условная вероятность. Независимость событий.\n\n    \n    \n        📄 Презентация\n    \n    Геометрическая вероятность. Полная вероятность. Формула Байеса.\n\n    \n    \n        📄 Презентация\n    \n    Дискретные случайные величины. Математическое ожидание.\n\n    \n    \n        📄 Презентация\n    \n    Дисперсия. Функция распределения. Бернулли, биномиальное, Пуассон.\n\n    \n    \n        📄 Презентация\n    \n    Многомерные дискретные случайные величины.\n\n    \n    \n        📄 Презентация\n    \n    Линейные комбинации случайных величин. Ковариация и корреляция.\n\nНет подходящих элементов"
+  },
+  {
+    "objectID": "program.html#лекции",
+    "href": "program.html#лекции",
+    "title": "Лекции",
+    "section": "",
+    "text": "📄 Презентация\n    \n    Вероятностное пространство. Классическая, комбинаторная вероятность.\n\n    \n    \n        📄 Презентация\n    \n    Условная вероятность. Независимость событий.\n\n    \n    \n        📄 Презентация\n    \n    Геометрическая вероятность. Полная вероятность. Формула Байеса.\n\n    \n    \n        📄 Презентация\n    \n    Дискретные случайные величины. Математическое ожидание.\n\n    \n    \n        📄 Презентация\n    \n    Дисперсия. Функция распределения. Бернулли, биномиальное, Пуассон.\n\n    \n    \n        📄 Презентация\n    \n    Многомерные дискретные случайные величины.\n\n    \n    \n        📄 Презентация\n    \n    Линейные комбинации случайных величин. Ковариация и корреляция.\n\nНет подходящих элементов"
+  },
+  {
+    "objectID": "program.html#консультации",
+    "href": "program.html#консультации",
+    "title": "Лекции",
+    "section": "Консультации",
+    "text": "Консультации\n\n\nНет подходящих элементов"
+  },
+  {
+    "objectID": "atoms/probability/binom.html",
+    "href": "atoms/probability/binom.html",
+    "title": "",
+    "section": "",
+    "text": "Теперь, когда у нас есть процесс Бернулли, возникает естественный вопрос: “Сколько успехов мы получим в \\(n\\) испытаниях?”\n\n\n\n\n\n\n\nDefinition\n\n\n\n\n\nБиномиальное распределение описывает количество успехов в \\(n\\) независимых испытаниях Бернулли с вероятностью успеха \\(p\\). Если \\(X_1, X_2, \\ldots, X_n\\) - процесс Бернулли с параметром \\(p\\), то случайная величина: \\[Y = X_1 + X_2 + \\ldots + X_n\\] имеет биномиальное распределение и обозначается \\(Y \\sim Bin(n, p)\\). \\(Y\\) может принимать значения \\(0, 1, 2, \\ldots, n\\) (от \\(0\\) до \\(n\\) успехов)."
+  },
+  {
+    "objectID": "atoms/probability/binom.html#биномиальное-распределение",
+    "href": "atoms/probability/binom.html#биномиальное-распределение",
+    "title": "",
+    "section": "",
+    "text": "Теперь, когда у нас есть процесс Бернулли, возникает естественный вопрос: “Сколько успехов мы получим в \\(n\\) испытаниях?”\n\n\n\n\n\n\n\nDefinition\n\n\n\n\n\nБиномиальное распределение описывает количество успехов в \\(n\\) независимых испытаниях Бернулли с вероятностью успеха \\(p\\). Если \\(X_1, X_2, \\ldots, X_n\\) - процесс Бернулли с параметром \\(p\\), то случайная величина: \\[Y = X_1 + X_2 + \\ldots + X_n\\] имеет биномиальное распределение и обозначается \\(Y \\sim Bin(n, p)\\). \\(Y\\) может принимать значения \\(0, 1, 2, \\ldots, n\\) (от \\(0\\) до \\(n\\) успехов)."
+  },
+  {
+    "objectID": "atoms/probability/binom.html#функция-вероятности-биномиального-распределения",
+    "href": "atoms/probability/binom.html#функция-вероятности-биномиального-распределения",
+    "title": "",
+    "section": "Функция вероятности биномиального распределения",
+    "text": "Функция вероятности биномиального распределения\nВероятность получить ровно \\(k\\) успехов в \\(n\\) испытаниях:\n\\[\n    P(Y = k) = C_n^k p^k (1-p)^{n-k}\n\\]\n\n\n\n\n\n\nИнтуиция формулы"
+  },
+  {
+    "objectID": "atoms/probability/binom.html#необходимость-подсчета-комбинаций",
+    "href": "atoms/probability/binom.html#необходимость-подсчета-комбинаций",
+    "title": "",
+    "section": "Необходимость подсчета комбинаций",
+    "text": "Необходимость подсчета комбинаций\n\n\nПример: \\(n = 7\\) испытаний, ровно \\(k = 2\\) успеха. Зелёный круг — успех, белый — неудача. Несколько возможных серий:\n\n\nДля каждой уникальной серии испытаний есть уникальный набор координат успехов.\nТаких наборов координат много: \\((1,2)\\), \\((1,3)\\), \\(\\ldots\\), \\((6,7)\\).\nЧтобы посчитать вероятность ровно \\(2\\) успехов, нужно знать, сколько таких наборов координат возможно. Иными словами, сколько множеств мощности \\(2\\) можно извлечь из множества мощности \\(7\\).\nЭто и есть число комбинаций: \\[\nC_7^2 = \\binom{7}{2} = \\frac{7!}{2!\\,5!} = 21.\n\\]\n\n\n\nПусть \\(p = 0.2\\), \\(Y \\sim Bin(7, 0.2)\\). Тогда \\[\\begin{align*}\nP(Y = 2)\n&= C_7^2 \\, p^2 (1-p)^{5}\n= 21 \\cdot 0.2^2 \\cdot 0.8^5\n= 21 \\cdot 0.04 \\cdot 0.32768\n\\approx 0.275, \\\\\nP(Y \\leq 2)\n&= P(Y=0) + P(Y=1) + P(Y=2) \\\\\n&= C_7^0 \\, 0.8^7 + C_7^1 \\, 0.2 \\cdot 0.8^6 + C_7^2 \\, p^2 (1-p)^{5} \\approx 0.852.\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "atoms/probability/binom.html#биномиальное-распределение-1",
+    "href": "atoms/probability/binom.html#биномиальное-распределение-1",
+    "title": "",
+    "section": "Биномиальное распределение",
+    "text": "Биномиальное распределение\n\nОсновные характеристики\nДля случайной величины \\(Y \\sim Bin(n, p)\\):\nМатематическое ожидание: \\[E[Y] = np\\]\nДисперсия: \\[Var[Y] = np(1-p)\\]\nСтандартное отклонение: \\[\\sigma = \\sqrt{np(1-p)}\\]\nНаивероятнейшее число успехов \\(k_0\\) (мода распределения) — целое число, для которого \\(P(Y=k_0)\\) максимальна. При \\(q = 1-p\\) оно удовлетворяет \\[\nnp - q \\leq k_0 \\leq np + p.\n\\] Эквивалентная запись: \\((n+1)p - 1 \\leq k_0 \\leq (n+1)p\\). Если \\((n+1)p\\) целое, наивероятнейших значений два: \\(k_0 = (n+1)p - 1\\) и \\(k_0 = (n+1)p\\)."
+  },
+  {
+    "objectID": "atoms/probability/binom.html#визуализация-биномиального-распределения",
+    "href": "atoms/probability/binom.html#визуализация-биномиального-распределения",
+    "title": "",
+    "section": "Визуализация биномиального распределения",
+    "text": "Визуализация биномиального распределения\nФорма биномиального распределения зависит от параметров \\(n\\) и \\(p\\). Рассмотрим, как влияет значение \\(p\\) на распределение при фиксированном \\(n = 20\\):\n\nСравнение различных значений p\n\n\n\nСравнение биномиального распределения для разных значений p"
+  },
+  {
+    "objectID": "atoms/probability/binom.html#визуализация-биномиального-распределения-1",
+    "href": "atoms/probability/binom.html#визуализация-биномиального-распределения-1",
+    "title": "",
+    "section": "Визуализация биномиального распределения",
+    "text": "Визуализация биномиального распределения\n\n\n\n\n\n\nНаблюдения\n\n\n\np &lt; 0.5 (например, p = 0.3): Распределение смещено влево, большинство значений сосредоточено в области малых k\np = 0.5: Распределение симметрично относительно среднего значения\np &gt; 0.5 (например, p = 0.7): Распределение смещено вправо, большинство значений сосредоточено в области больших k"
+  },
+  {
+    "objectID": "atoms/probability/binom.html#пример-подбрасывание-монеты",
+    "href": "atoms/probability/binom.html#пример-подбрасывание-монеты",
+    "title": "",
+    "section": "Пример: подбрасывание монеты",
+    "text": "Пример: подбрасывание монеты\nПодбросим честную монету 10 раз. Какова вероятность получить ровно 6 орлов?\n\n\\(n = 10\\), \\(p = 0.5\\), \\(k = 6\\), \\(Y \\sim Bin(10, 0.5)\\)\n\n\\[P(Y = 6) = C_{10}^6 (0.5)^6 (0.5)^4 = \\frac{10!}{6! \\cdot 4!} (0.5)^{10}\\]\n\\[= \\frac{10 \\cdot 9 \\cdot 8 \\cdot 7}{4 \\cdot 3 \\cdot 2 \\cdot 1} \\cdot \\frac{1}{1024} = 210 \\cdot \\frac{1}{1024} \\approx 0.205\\]"
+  },
+  {
+    "objectID": "atoms/probability/binom.html#пример-контроль-качества",
+    "href": "atoms/probability/binom.html#пример-контроль-качества",
+    "title": "",
+    "section": "Пример: контроль качества",
+    "text": "Пример: контроль качества\nНа заводе производят детали, 3% из которых бракованные. Проверяют партию из 100 деталей.\n\n\\(n = 100\\), \\(p = 0.03\\) (вероятность брака)\n\\(Y \\sim Bin(100, 0.03)\\) - количество бракованных деталей\n\nХарактеристики:\nВероятность не найти ни одной бракованной детали: \\[P(Y = 0) = C_{100}^0 (0.03)^0 (0.97)^{100} = (0.97)^{100} \\approx 0.048\\]"
+  },
+  {
+    "objectID": "atoms/probability/binom.html#применения-биномиального-распределения",
+    "href": "atoms/probability/binom.html#применения-биномиального-распределения",
+    "title": "",
+    "section": "Применения биномиального распределения",
+    "text": "Применения биномиального распределения"
+  },
+  {
+    "objectID": "atoms/probability/drv_cdf.html",
+    "href": "atoms/probability/drv_cdf.html",
+    "title": "",
+    "section": "",
+    "text": "Definition\n\n\n\n\n\nФункция распределения (кумулятивная/интегральная) (CDF) случайной величины \\(X\\) определяется как: \\[\n  F_X(x) = P(X \\leq x), \\quad F_X(x): \\mathbb{R} \\longrightarrow [0,1] \\subset \\mathbb{R}\n\\] Для дискретной случайной величины: \\[\n  F_X(x) = \\sum_{i: \\, x_i \\leq x} P_X(X = x_i)\n\\]\n\n\n\n\n\\(F_X(x)\\) показывает вероятность того, что случайная величина \\(X\\) примет значение, не превышающее \\(x\\). Иными словами, сколько вероятности “скопилось”, аккумулировалось, до значения \\(x\\)."
+  },
+  {
+    "objectID": "atoms/probability/drv_cdf.html#функция-распределения-кумулятивнаяинтегральная",
+    "href": "atoms/probability/drv_cdf.html#функция-распределения-кумулятивнаяинтегральная",
+    "title": "",
+    "section": "",
+    "text": "Definition\n\n\n\n\n\nФункция распределения (кумулятивная/интегральная) (CDF) случайной величины \\(X\\) определяется как: \\[\n  F_X(x) = P(X \\leq x), \\quad F_X(x): \\mathbb{R} \\longrightarrow [0,1] \\subset \\mathbb{R}\n\\] Для дискретной случайной величины: \\[\n  F_X(x) = \\sum_{i: \\, x_i \\leq x} P_X(X = x_i)\n\\]\n\n\n\n\n\\(F_X(x)\\) показывает вероятность того, что случайная величина \\(X\\) примет значение, не превышающее \\(x\\). Иными словами, сколько вероятности “скопилось”, аккумулировалось, до значения \\(x\\)."
+  },
+  {
+    "objectID": "atoms/probability/drv_cdf.html#свойства-cdf-для-дискретных-случайных-величин",
+    "href": "atoms/probability/drv_cdf.html#свойства-cdf-для-дискретных-случайных-величин",
+    "title": "",
+    "section": "Свойства CDF для дискретных случайных величин",
+    "text": "Свойства CDF для дискретных случайных величин"
+  },
+  {
+    "objectID": "atoms/probability/drv_cdf.html#пример-1-cdf-для-распределения-x",
+    "href": "atoms/probability/drv_cdf.html#пример-1-cdf-для-распределения-x",
+    "title": "",
+    "section": "Пример 1: CDF для распределения X",
+    "text": "Пример 1: CDF для распределения X\nВспомним наше первое распределение:\nВычислим CDF:"
+  },
+  {
+    "objectID": "atoms/probability/drv_cdf.html#график-cdf-для-распределения-x",
+    "href": "atoms/probability/drv_cdf.html#график-cdf-для-распределения-x",
+    "title": "",
+    "section": "График CDF для распределения X",
+    "text": "График CDF для распределения X"
+  },
+  {
+    "objectID": "atoms/probability/drv_cdf.html#использование-cdf-для-вычисления-вероятностей",
+    "href": "atoms/probability/drv_cdf.html#использование-cdf-для-вычисления-вероятностей",
+    "title": "",
+    "section": "Использование CDF для вычисления вероятностей",
+    "text": "Использование CDF для вычисления вероятностей\nCDF позволяет легко вычислять вероятности попадания в интервалы:\n\n\n\n\n\n\nФормулы для вычисления вероятностей"
+  },
+  {
+    "objectID": "atoms/probability/mrv_funcs.html#функции-от-многомерных-случайных-величин-1",
+    "href": "atoms/probability/mrv_funcs.html#функции-от-многомерных-случайных-величин-1",
+    "title": "",
+    "section": "Функции от многомерных случайных величин",
+    "text": "Функции от многомерных случайных величин\n\nПример\nСовместная функция вероятности \\(X\\) и \\(Y\\) задана следующим образом:\nРассмотрим функции \\(W = XY\\), \\(G = X-Y\\). Найдите их функции вероятности и математические ожидания."
+  },
+  {
+    "objectID": "atoms/probability/mrv_funcs.html#функции-от-многомерных-случайных-величин-2",
+    "href": "atoms/probability/mrv_funcs.html#функции-от-многомерных-случайных-величин-2",
+    "title": "",
+    "section": "Функции от многомерных случайных величин",
+    "text": "Функции от многомерных случайных величин\n\nРешение\nНайти математическое ожидание \\(E[XY]\\)\nВариант 1: Через распределение новой случайной величины\nСначала соберём ряд распределения \\(W = XY\\):\nКак только есть функция вероятности для новой величины, дальше применяем определение матожидания: \\[\nE[W] = \\sum_w w\\, p_W(w) = 1\\cdot\\frac{1}{8} + 2\\cdot\\frac{3}{8} + 4\\cdot\\frac{1}{2} = \\frac{23}{8}.\n\\] То есть \\(E[XY] = E[W] = \\frac{23}{8}\\)."
+  },
+  {
+    "objectID": "atoms/probability/mrv_funcs.html#функции-от-многомерных-случайных-величин-3",
+    "href": "atoms/probability/mrv_funcs.html#функции-от-многомерных-случайных-величин-3",
+    "title": "",
+    "section": "Функции от многомерных случайных величин",
+    "text": "Функции от многомерных случайных величин\n\nРешение\nВариант 2: Используя формулу непосредственного подсчета\nИспользуем знание, что новая случайная величина \\(W\\) является функцией от случайного вектора \\((X,Y)\\), такая что: \\(W = f(X,Y) = XY\\).\n\\[\\begin{gather*}\nE[W] = E[f(X, Y)]  = \\sum\\limits_{i} \\sum\\limits_{j} f(x_i, y_j) P(X = x_i, Y = y_j) = \\sum\\limits_{i=1}^{2} \\sum\\limits_{j=1}^{2} x_i y_j P(X = x_i, Y = y_j) \\\\\nE[W] = E[f(X, Y)] = E[XY] = 1 \\cdot 1 \\cdot \\frac{1}{8} + 1 \\cdot 2 \\cdot \\frac{1}{4} + 2 \\cdot 1 \\cdot \\frac{1}{8} + 2 \\cdot 2 \\cdot \\frac{1}{2} = \\frac{23}{8}\n\\end{gather*}\\]\nОтвет: \\(E[XY] = \\frac{23}{8} = 2.875\\)"
+  },
+  {
+    "objectID": "atoms/probability/mrv_funcs.html#функции-от-многомерных-случайных-величин-4",
+    "href": "atoms/probability/mrv_funcs.html#функции-от-многомерных-случайных-величин-4",
+    "title": "",
+    "section": "Функции от многомерных случайных величин",
+    "text": "Функции от многомерных случайных величин\n\nРешение\nНайти математическое ожидание \\(E[X-Y]\\)\nВариант 1: Через распределение новой случайной величины\nСначала соберём ряд распределения \\(G = X - Y\\):\nКак только есть функция вероятности для новой величины, дальше применяем определение матожидания: \\[\nE[G] = \\sum_g g\\, p_G(g) = (-1)\\cdot\\frac{1}{4} + 0\\cdot\\frac{5}{8} + 1\\cdot\\frac{1}{8} = -\\frac{1}{8}.\n\\] То есть \\(E[X-Y] = E[G] = -\\frac{1}{8}\\)."
+  },
+  {
+    "objectID": "atoms/probability/mrv_funcs.html#функции-от-многомерных-случайных-величин-5",
+    "href": "atoms/probability/mrv_funcs.html#функции-от-многомерных-случайных-величин-5",
+    "title": "",
+    "section": "Функции от многомерных случайных величин",
+    "text": "Функции от многомерных случайных величин\n\nРешение\nВариант 2: Используя формулу непосредственного подсчета\nИспользуем знание, что новая случайная величина \\(G\\) является функцией от случайного вектора \\((X,Y)\\), такая что: \\(G = f(X,Y) = X - Y\\).\n\\[\\begin{gather*}\nE[G] = E[f(X, Y)] = \\sum\\limits_{i} \\sum\\limits_{j} f(x_i, y_j) P(X = x_i, Y = y_j) = \\sum\\limits_{i=1}^{2} \\sum\\limits_{j=1}^{2} (x_i - y_j) P(X = x_i, Y = y_j) \\\\\nE[X-Y] = E[G] = (1-1) \\cdot \\frac{1}{8} + (1-2) \\cdot \\frac{1}{4} + (2-1) \\cdot \\frac{1}{8} + (2-2) \\cdot \\frac{1}{2} = -\\frac{1}{8}\n\\end{gather*}\\]\nОтвет: \\(E[X-Y] = -\\frac{1}{8} = -0.125\\)"
+  },
+  {
+    "objectID": "atoms/probability/mdrv_joint.html#совместная-функция-вероятности",
+    "href": "atoms/probability/mdrv_joint.html#совместная-функция-вероятности",
+    "title": "",
+    "section": "Совместная функция вероятности",
+    "text": "Совместная функция вероятности"
+  },
+  {
+    "objectID": "atoms/probability/mdrv_joint.html#совместная-функция-вероятности-1",
+    "href": "atoms/probability/mdrv_joint.html#совместная-функция-вероятности-1",
+    "title": "",
+    "section": "Совместная функция вероятности",
+    "text": "Совместная функция вероятности\n\nСвойства"
+  },
+  {
+    "objectID": "atoms/probability/bern.html",
+    "href": "atoms/probability/bern.html",
+    "title": "",
+    "section": "",
+    "text": "Начнем с простейшего случая - одного случайного эксперимента с двумя возможными исходами.\n\n\n\n\n\n\nDefinition\n\n\n\n\n\nРаспределение Бернулли - это распределение случайной величины \\(X\\), которая принимает только два значения: \\[\nX = \\begin{cases}\n1 & \\text{с вероятностью } p \\text{ (\"успех\")} \\\\\n0 & \\text{с вероятностью } q = 1-p \\text{ (\"неудача\")}\n\\end{cases}\n\\] Обозначается как \\(X \\sim Bern(p)\\), где \\(p \\in [0, 1]\\) - параметр распределения."
+  },
+  {
+    "objectID": "atoms/probability/bern.html#распределение-бернулли",
+    "href": "atoms/probability/bern.html#распределение-бернулли",
+    "title": "",
+    "section": "",
+    "text": "Начнем с простейшего случая - одного случайного эксперимента с двумя возможными исходами.\n\n\n\n\n\n\nDefinition\n\n\n\n\n\nРаспределение Бернулли - это распределение случайной величины \\(X\\), которая принимает только два значения: \\[\nX = \\begin{cases}\n1 & \\text{с вероятностью } p \\text{ (\"успех\")} \\\\\n0 & \\text{с вероятностью } q = 1-p \\text{ (\"неудача\")}\n\\end{cases}\n\\] Обозначается как \\(X \\sim Bern(p)\\), где \\(p \\in [0, 1]\\) - параметр распределения."
+  },
+  {
+    "objectID": "atoms/probability/bern.html#характеристики-распределения-бернулли",
+    "href": "atoms/probability/bern.html#характеристики-распределения-бернулли",
+    "title": "",
+    "section": "Характеристики распределения Бернулли",
+    "text": "Характеристики распределения Бернулли\n\n\n\n\n\n\nОсновные характеристики\n\n\n\nДля случайной величины \\(X \\sim Bern(p)\\):"
+  },
+  {
+    "objectID": "atoms/probability/bern.html#примеры-распределения-бернулли",
+    "href": "atoms/probability/bern.html#примеры-распределения-бернулли",
+    "title": "",
+    "section": "Примеры распределения Бернулли",
+    "text": "Примеры распределения Бернулли"
+  },
+  {
+    "objectID": "atoms/probability/bern.html#от-одного-испытания-к-процессу",
+    "href": "atoms/probability/bern.html#от-одного-испытания-к-процессу",
+    "title": "",
+    "section": "От одного испытания к процессу",
+    "text": "От одного испытания к процессу"
+  },
+  {
+    "objectID": "atoms/probability/bern.html#процесс-бернулли",
+    "href": "atoms/probability/bern.html#процесс-бернулли",
+    "title": "",
+    "section": "Процесс Бернулли",
+    "text": "Процесс Бернулли\n\n\n\n\n\n\nDefinition\n\n\n\n\n\nПроцесс Бернулли - это последовательность независимых одинаково распределенных случайных величин \\(X_1, X_2, \\ldots, X_n\\), где каждая \\(X_i \\sim Bern(p)\\): \\[\nX_i = \\begin{cases}\n1 & \\text{с вероятностью } p \\text{ (\"успех\")} \\\\\n0 & \\text{с вероятностью } 1-p \\text{ (\"неудача\")}\n\\end{cases}\n\\]\n\n\n\n\nКлючевое отличие от одного испытания: теперь у нас есть последовательность результатов."
+  },
+  {
+    "objectID": "atoms/probability/bern.html#свойства-процесса-бернулли",
+    "href": "atoms/probability/bern.html#свойства-процесса-бернулли",
+    "title": "",
+    "section": "Свойства процесса Бернулли",
+    "text": "Свойства процесса Бернулли"
+  },
+  {
+    "objectID": "atoms/probability/bern.html#примеры-процесса-бернулли",
+    "href": "atoms/probability/bern.html#примеры-процесса-бернулли",
+    "title": "",
+    "section": "Примеры процесса Бернулли",
+    "text": "Примеры процесса Бернулли"
+  },
+  {
+    "objectID": "atoms/probability/drv_intro.html",
+    "href": "atoms/probability/drv_intro.html",
+    "title": "",
+    "section": "",
+    "text": "Элементарный исход в общем может иметь различный характер: цвет, буква, звук и т.д. Но для более углубленного и полного анализа случайного эксперимента лучше работать с числами.\nМожем ли мы также прикрепить число к каждому элементарному исходу независимо от его природы, а затем оперировать в пространстве чисел? Спойлер: это даст нам новые инструменты, которые недоступны, если мы работаем с исходами разной природы.\nПример: игральная кость с \\(6\\) гранями, \\(2\\) грани желтые, \\(2\\) грани зеленые, \\(2\\) грани черные, без чисел - мы можем искусственно прикрепить числа \\(1, 2, 3\\) к каждому цвету."
+  },
+  {
+    "objectID": "atoms/probability/drv_intro.html#случайные-величины-мотивация",
+    "href": "atoms/probability/drv_intro.html#случайные-величины-мотивация",
+    "title": "",
+    "section": "",
+    "text": "Элементарный исход в общем может иметь различный характер: цвет, буква, звук и т.д. Но для более углубленного и полного анализа случайного эксперимента лучше работать с числами.\nМожем ли мы также прикрепить число к каждому элементарному исходу независимо от его природы, а затем оперировать в пространстве чисел? Спойлер: это даст нам новые инструменты, которые недоступны, если мы работаем с исходами разной природы.\nПример: игральная кость с \\(6\\) гранями, \\(2\\) грани желтые, \\(2\\) грани зеленые, \\(2\\) грани черные, без чисел - мы можем искусственно прикрепить числа \\(1, 2, 3\\) к каждому цвету."
+  },
+  {
+    "objectID": "atoms/probability/drv_intro.html#случайные-величины-формальное-определение",
+    "href": "atoms/probability/drv_intro.html#случайные-величины-формальное-определение",
+    "title": "",
+    "section": "Случайные величины: Формальное определение",
+    "text": "Случайные величины: Формальное определение\n\n\nРезультирующее ‘прикрепленное’ число мы называем случайной величиной.\n\nДискретная случайная величина \\(X\\) в пространстве вероятностей \\((\\Omega, \\mathcal{F}, P)\\) является отображением \\(X: \\Omega \\rightarrow \\mathbb{R}\\), такое что:\n\n\nОбраз \\(X(\\Omega) = \\Omega_X = Im \\, X\\) (все возможные результаты) является счетным подмножеством \\(\\mathbb{R}\\),\n\\(\\{\\omega \\in \\Omega: X(\\omega) = x\\} \\in \\mathcal{F}\\), для \\(x \\in \\mathbb{R}\\).\n\n\nДля упрощения мы сокращаем события вида \\(\\{ \\omega \\in \\Omega: X(\\omega) = x \\}\\) до более простого вида \\(\\{ X = x \\}\\)."
+  },
+  {
+    "objectID": "atoms/probability/drv_intro.html#вероятность-случайной-величины",
+    "href": "atoms/probability/drv_intro.html#вероятность-случайной-величины",
+    "title": "",
+    "section": "Вероятность случайной величины",
+    "text": "Вероятность случайной величины\n\nОсновной оставшийся вопрос - как находить вероятности различных значений С.В.\nМы знаем, что каждое уникальное значение С.В. привязано к какому-то событию из \\(\\mathcal{F}\\). Тогда вероятность этого события и будет вероятностью получить данное значение С.В.\nОпределение. Функция вероятности дискретной случайной переменной \\(X\\) - это функция \\(p_X(x): \\mathbb{R} \\rightarrow [0,1]\\), заданная как: \\[\np_X(x) = P(X = x) = P(A), \\text{ где } A = \\{ \\omega \\in \\Omega: X(\\omega) = x \\}\n\\]\nСвойства:\n\n\n\\(p_X(x) \\geq 0\\) для \\(\\forall x \\in \\Omega_X\\), \\(p_X(x) = 0\\) для \\(x \\notin \\Omega_X\\)\n\\(\\sum \\limits_{x_i \\in \\Omega_X} p_X(x_i) = 1\\)."
+  },
+  {
+    "objectID": "atoms/probability/drv_intro.html#случайные-величины-пример",
+    "href": "atoms/probability/drv_intro.html#случайные-величины-пример",
+    "title": "",
+    "section": "Случайные величины: Пример",
+    "text": "Случайные величины: Пример\nПодбрасываются две монеты. Первая монета выпадает орлом с вероятностью \\(0.6\\), вторая с вероятностью \\(0.7\\). Предположим, что результаты подбрасываний независимы, и пусть \\(X\\) равно общему количеству выпавших орлов. Постройте дискретную случайную величину и её функцию вероятности."
+  },
+  {
+    "objectID": "atoms/probability/drv_intro.html#случайные-величины-пример-решение",
+    "href": "atoms/probability/drv_intro.html#случайные-величины-пример-решение",
+    "title": "",
+    "section": "Случайные величины: Пример (решение)",
+    "text": "Случайные величины: Пример (решение)\n\nИсходы пары монет: \\((T,T)\\), \\((H,T)\\), \\((T,H)\\), \\((H,H)\\); \\(X\\) — число орлов, \\(\\Omega_X = \\{0, 1, 2\\}\\).\nКаждое значение \\(X\\) — событие из \\(\\mathcal{F}\\), набор исходов. Из независимости: \\[\\begin{align*}\nP(X = 0) &= P(\\{(T,T)\\}) = 0.4 \\cdot 0.3 = 0.12, \\\\\nP(X = 2) &= P(\\{(H,H)\\}) = 0.6 \\cdot 0.7 = 0.42, \\\\\nP(X = 1) &= P(\\{(H,T), (T,H)\\}) = 0.6\\cdot 0.3 + 0.4\\cdot 0.7 = 0.46.\n\\end{align*}\\]\nФункция вероятности:\n\\(\\sum_{x \\in \\Omega_X} p_X(x) = 1\\)."
+  },
+  {
+    "objectID": "atoms/probability/drv_intro.html#случайные-величины-пример-1",
+    "href": "atoms/probability/drv_intro.html#случайные-величины-пример-1",
+    "title": "",
+    "section": "Случайные величины: Пример",
+    "text": "Случайные величины: Пример"
+  },
+  {
+    "objectID": "atoms/probability/drv_intro.html#новое-пространство-вероятности",
+    "href": "atoms/probability/drv_intro.html#новое-пространство-вероятности",
+    "title": "",
+    "section": "Новое пространство вероятности",
+    "text": "Новое пространство вероятности\n\nКак и прежде, мы можем комбинировать случайные переменные в события.\nНапример, \\(A = \\{ x_1, \\ldots, x_k \\}\\), \\(x_1, \\ldots, x_k \\in  \\Omega_X\\).\nДля вычисления \\(P(A)\\) мы используем принцип аддитивности: \\[\nP(A) = P(\\{X = x_1\\} \\cup \\ldots \\cup \\{X = x_k \\}) = \\sum \\limits_{i=1}^{k} P(\\{X = x_i\\}).\n\\]\nВ конечном счете, мы можем забыть о нашем оригинальном \\((\\Omega, \\mathcal{F}, P)\\), скрыть их ‘под капотом’ нашего случайного эксперимента. Вместо этого мы используем новое пространство \\(\\Omega_X\\) всех возможных значений С.В. и \\(p_X(x)\\) как новую функцию вероятности."
+  },
+  {
+    "objectID": "atoms/probability/drv_intro.html#функции-от-случайных-величин",
+    "href": "atoms/probability/drv_intro.html#функции-от-случайных-величин",
+    "title": "",
+    "section": "Функции от случайных величин",
+    "text": "Функции от случайных величин\n\nСлучайная величина, будучи неизвестным, но все-таки числом, может быть аргументом для какой-либо другой функции,\nНапример, если \\(X\\) - это количество проданных тортов, то \\(Y = cX\\) - это доход, где \\(c\\) - цена. Далее, \\(T = Y - aX - b = kX - b\\) может быть чистой прибылью, доход за вычетом издержек на производство. Все это - случайные величины!"
+  },
+  {
+    "objectID": "atoms/probability/drv_intro.html#функции-от-случайных-величин-1",
+    "href": "atoms/probability/drv_intro.html#функции-от-случайных-величин-1",
+    "title": "",
+    "section": "Функции от случайных величин",
+    "text": "Функции от случайных величин\n\nПример\nПусть распределение случайной величины задано таблицей\nПостройте распределение случайной величины \\(Y = X^2 + 10\\).\nНаша задача: восстановить новое пространство элементарных исходов \\(\\Omega_Y\\) для величины \\(Y\\) и выразить новую функцию вероятности \\(P_Y(y)\\) через старую известную \\(P_X(x)\\).\n\n\\(P_Y(Y=10) = P_X(\\{X=0\\}) = 0.1\\)\n\\(P_Y(Y=11) = P_X(\\{X=1\\} \\cup \\{X=-1\\}) = P_X(\\{X=1\\}) + P_X(\\{X=-1\\}) = 0.3\\)\n\\(P_Y(Y=14) = P_X(\\{X=2\\} \\cup \\{X=-2\\}) = P_X(\\{X=2\\}) + P_X(\\{X=-2\\}) = 0.3\\)\n\\(P_Y(Y=19) = P_X(\\{X=3\\}) = 0.3\\)"
+  },
+  {
+    "objectID": "atoms/probability/drv_intro.html#функции-от-случайных-величин-2",
+    "href": "atoms/probability/drv_intro.html#функции-от-случайных-величин-2",
+    "title": "",
+    "section": "Функции от случайных величин",
+    "text": "Функции от случайных величин\n\nПример"
+  },
+  {
+    "objectID": "atoms/probability/drv_intro.html#функции-от-случайных-величин-3",
+    "href": "atoms/probability/drv_intro.html#функции-от-случайных-величин-3",
+    "title": "",
+    "section": "Функции от случайных величин",
+    "text": "Функции от случайных величин\n\nЕсли \\(Y=g(X)\\), то \\(Y\\) это новая случайная величина, со своими характеристиками, со своими возможными значениями \\(\\Omega_Y\\), и со своей функцией вероятности \\(P_Y(y)\\).\n\n\n\n\n\n\nПостроение новой функции вероятности\n\n\n\nЕсли \\(Y=g(X)\\), функцию вероятности для \\(Y\\) можно выразить через функцию вероятности для \\(X\\): \\[\np_Y(y) = P(Y=y) = P(g(X) = y) = P(\\{ X \\in g^{-1}(y) \\}) = \\sum \\limits_{x \\in g^{-1}(y)} P(X = x)\n\\]\n\n\nМожно говорить, что функция от случайной величины порождает абсолютно новый случайный эксперимент с новым вероятностным пространством (тройкой Колмогорова):"
+  },
+  {
+    "objectID": "atoms/probability/drv_expectation.html#физическое-отступление-1",
+    "href": "atoms/probability/drv_expectation.html#физическое-отступление-1",
+    "title": "",
+    "section": "Физическое отступление",
+    "text": "Физическое отступление\n\n\\(x_{gc} = \\sum\\limits_{i} x_i m_i\\), при \\(\\sum\\limits_{i} m_i = 1\\).\nВ данном примере \\(x_{gc} = 0 \\cdot 0.4 + 2 \\cdot 0.6 = 1.2\\)\nПредположим С.В., которую мы реализуем \\(10^5\\) раз с \\(P_X(0) = 0.4\\), \\(P_X(2) = 0.6\\). Посчитаем среднее суммы за все испытания: \\[\n  avg = \\frac{\\approx 60000 \\cdot 2 + \\approx 40000 \\cdot 0}{10^5} \\approx 1.2\n\\]"
+  },
+  {
+    "objectID": "atoms/probability/drv_expectation.html#характеристики-с.в.-математическое-ожидание",
+    "href": "atoms/probability/drv_expectation.html#характеристики-с.в.-математическое-ожидание",
+    "title": "",
+    "section": "Характеристики С.В.: Математическое ожидание",
+    "text": "Характеристики С.В.: Математическое ожидание\n\nМатематическое ожидание - это число, константа, которое помогает нам понять тренд значений, куда в среднем стремятся значения случайной величины на большой дистанции.\nМожно рассматривать это как средний результат множества реализаций данного случайного эксперимента.\nОжидаемое значение может не входить в набор возможных значений \\(\\Omega_X\\).\n\n\n\n\n\n\nDefinition\n\n\n\n\n\nЕсли \\(X\\) - дискретная случайная величина, то ожидание \\(X\\) обозначается как \\(E[X]\\) и определяется как: \\[\n  E[X] = \\sum \\limits_{x \\in \\Omega_X} x P(X = x) = \\sum \\limits_{x \\in \\Omega_X} x P_X(x).\n\\]"
+  },
+  {
+    "objectID": "atoms/probability/drv_expectation.html#характеристики-с.в.-математическое-ожидание-1",
+    "href": "atoms/probability/drv_expectation.html#характеристики-с.в.-математическое-ожидание-1",
+    "title": "",
+    "section": "Характеристики С.В.: Математическое ожидание",
+    "text": "Характеристики С.В.: Математическое ожидание\n\n\nВ физическом мире:\n\n\\(x_{gc} = \\sum x_i m_i = 0 \\cdot 0.2 + 1 \\cdot 0.5 + 3 \\cdot 0.3 = 1.4\\)\n\n\nВ вероятностном мире:\n\n\\(E[X] = \\sum x_i \\cdot P_X(X=x_i) = 0 \\cdot 0.2 + 1 \\cdot 0.5 + 3 \\cdot 0.3 = 1.4\\)\n\n\n\n\n\n\n\n\n\nFun fact\n\n\n\nВ международной литературе функция вероятности дискретной случайной величины \\(P_X(x)\\) называется Probability Mass Function, своим названием явно подчеркивая аналогию, что вероятность может выступать в роли “массы” элементарного исхода. Тогда математическое ожидание можно интерпретировать как взвешенную сумму всех исходов, где в качестве веса используется вероятность."
+  },
+  {
+    "objectID": "atoms/probability/drv_expectation.html#свойства-математического-ожидания",
+    "href": "atoms/probability/drv_expectation.html#свойства-математического-ожидания",
+    "title": "",
+    "section": "Свойства математического ожидания",
+    "text": "Свойства математического ожидания"
+  },
+  {
+    "objectID": "atoms/probability/drv_expectation.html#математическое-ожидание-пример",
+    "href": "atoms/probability/drv_expectation.html#математическое-ожидание-пример",
+    "title": "",
+    "section": "Математическое ожидание: пример",
+    "text": "Математическое ожидание: пример\nПосмотрим на примеры вычисления математического ожидания на основе уже посчитанной задачи:"
+  },
+  {
+    "objectID": "atoms/probability/poisson.html",
+    "href": "atoms/probability/poisson.html",
+    "title": "",
+    "section": "",
+    "text": "Биномиальное удобно, когда число испытаний \\(n\\) известно и невелико.\nНа практике часто \\(n\\) огромно, а \\(p\\) мало: редкие события на большом потоке попыток.\nПримеры: число аварий за день, звонков в колл-центр за минуту, опечаток на странице.\nТогда удобнее модель Пуассона: считаем среднее число событий \\(\\lambda\\) за интервал (времени или участка), а не пару \\((n, p)\\)."
+  },
+  {
+    "objectID": "atoms/probability/poisson.html#от-биномиального-к-распределению-пуассона",
+    "href": "atoms/probability/poisson.html#от-биномиального-к-распределению-пуассона",
+    "title": "",
+    "section": "",
+    "text": "Биномиальное удобно, когда число испытаний \\(n\\) известно и невелико.\nНа практике часто \\(n\\) огромно, а \\(p\\) мало: редкие события на большом потоке попыток.\nПримеры: число аварий за день, звонков в колл-центр за минуту, опечаток на странице.\nТогда удобнее модель Пуассона: считаем среднее число событий \\(\\lambda\\) за интервал (времени или участка), а не пару \\((n, p)\\)."
+  },
+  {
+    "objectID": "atoms/probability/poisson.html#распределение-пуассона",
+    "href": "atoms/probability/poisson.html#распределение-пуассона",
+    "title": "",
+    "section": "Распределение Пуассона",
+    "text": "Распределение Пуассона\n\n\n\n\n\n\nDefinition\n\n\n\n\n\nРаспределение Пуассона описывает число наступлений редкого события за фиксированный промежуток времени (или на фиксированном участке). Случайная величина \\(X \\sim Pois(\\lambda)\\) принимает значения \\(0, 1, 2, \\ldots\\) с вероятностями \\[\n    P(X = k) = \\frac{\\lambda^k}{k!}\\, e^{-\\lambda}, \\qquad k = 0, 1, 2, \\ldots\n\\] где \\(\\lambda &gt; 0\\) — параметр: среднее число событий за выбранный интервал."
+  },
+  {
+    "objectID": "atoms/probability/poisson.html#интуиция-формулы-пуассона",
+    "href": "atoms/probability/poisson.html#интуиция-формулы-пуассона",
+    "title": "",
+    "section": "Интуиция формулы Пуассона",
+    "text": "Интуиция формулы Пуассона\n\n\n\n\n\n\nПредельный переход от биномиального\n\n\n\nВозьмём \\(Y \\sim Bin(n, p)\\) и устремим \\(n \\to \\infty\\), \\(p \\to 0\\) так, что \\(np = \\lambda\\) (фиксируем среднее). Подставим \\(p = \\lambda / n\\): \\[\\begin{align*}\n    P(Y = k)\n    &= C_n^k p^k (1-p)^{n-k}\n    = \\frac{n(n-1)\\cdots(n-k+1)}{k!}\n      \\left(\\frac{\\lambda}{n}\\right)^k\n      \\left(1-\\frac{\\lambda}{n}\\right)^{n-k} \\\\\n    &= \\frac{\\lambda^k}{k!}\n      \\cdot\n      \\underbrace{\\frac{n}{n}\\cdot\\frac{n-1}{n}\\cdots\\frac{n-k+1}{n}}_{\\to\\, 1}\n      \\cdot\n      \\underbrace{\\left(1-\\frac{\\lambda}{n}\\right)^{n}}_{\\to\\, e^{-\\lambda}}\n      \\cdot\n      \\underbrace{\\left(1-\\frac{\\lambda}{n}\\right)^{-k}}_{\\to\\, 1}.\n\\end{align*}\\] При \\(n \\to \\infty\\) получаем \\(P(Y = k) \\to \\dfrac{\\lambda^k}{k!}\\, e^{-\\lambda}\\)."
+  },
+  {
+    "objectID": "atoms/probability/poisson.html#характеристики-распределения-пуассона",
+    "href": "atoms/probability/poisson.html#характеристики-распределения-пуассона",
+    "title": "",
+    "section": "Характеристики распределения Пуассона",
+    "text": "Характеристики распределения Пуассона\n\n\n\n\n\n\nОсновные характеристики\n\n\n\nДля случайной величины \\(X \\sim Pois(\\lambda)\\):\nМатематическое ожидание: \\[E[X] = \\lambda\\]\nДисперсия: \\[Var[X] = \\lambda\\]\nСтандартное отклонение: \\[\\sigma = \\sqrt{\\lambda}\\]"
+  },
+  {
+    "objectID": "atoms/probability/poisson.html#когда-применима-модель-пуассона",
+    "href": "atoms/probability/poisson.html#когда-применима-модель-пуассона",
+    "title": "",
+    "section": "Когда применима модель Пуассона",
+    "text": "Когда применима модель Пуассона\nМодель \\(X \\sim Pois(\\lambda)\\) осмысленна, если одновременно выполняются условия:"
+  },
+  {
+    "objectID": "atoms/probability/poisson.html#простой-поток-событий",
+    "href": "atoms/probability/poisson.html#простой-поток-событий",
+    "title": "",
+    "section": "Простой поток событий",
+    "text": "Простой поток событий\nТермин пришёл из смежной области — теории массового обслуживания (очереди, заявки, вызовы). Это очень прикладная история: здесь те же условия, при которых хорошо работает Пуассон, поэтому мы можем моделировать ситуации из реального мира.\nПростой поток — модель потока однотипных событий во времени с тремя свойствами. Справа от стрелки — отсылка к соответствующему условию применимости Пуассона:\n если поток простой с интенсивностью \\(\\lambda\\), то число событий за время \\(t\\) имеет распределение \\(Pois(\\lambda t)\\)."
+  },
+  {
+    "objectID": "atoms/probability/poisson.html#пример-звонки-в-колл-центр",
+    "href": "atoms/probability/poisson.html#пример-звонки-в-колл-центр",
+    "title": "",
+    "section": "Пример: звонки в колл-центр",
+    "text": "Пример: звонки в колл-центр\nЗвонки поступают с интенсивностью \\(\\lambda = 4\\) звонка в минуту. Это пример простого потока событий: редкость на мелкой шкале, постоянная интенсивность, независимость на непересекающихся кусках времени."
+  },
+  {
+    "objectID": "atoms/probability/poisson.html#пример-решение",
+    "href": "atoms/probability/poisson.html#пример-решение",
+    "title": "",
+    "section": "Пример: решение",
+    "text": "Пример: решение\nЗа минуту \\(X \\sim Pois(4)\\)."
+  },
+  {
+    "objectID": "atoms/probability/poisson.html#пример-брак-на-участке-ленты",
+    "href": "atoms/probability/poisson.html#пример-брак-на-участке-ленты",
+    "title": "",
+    "section": "Пример: брак на участке ленты",
+    "text": "Пример: брак на участке ленты\nБрак на конвейере — пространственный аналог простого потока («время» заменено длиной ленты): в среднем \\(\\lambda = 1.5\\) бракованных деталей на заданный участок длины \\(1\\). Подходит, если брак не идёт “пачками” и интенсивность по длине примерно постоянна."
+  },
+  {
+    "objectID": "atoms/probability/poisson.html#пример-решение-1",
+    "href": "atoms/probability/poisson.html#пример-решение-1",
+    "title": "",
+    "section": "Пример: решение",
+    "text": "Пример: решение\nНа участке длины \\(1\\) пусть \\(X \\sim Pois(1.5)\\)."
+  },
+  {
+    "objectID": "atoms/probability/poisson.html#где-еще-можно-встретить-распределение-пуассона",
+    "href": "atoms/probability/poisson.html#где-еще-можно-встретить-распределение-пуассона",
+    "title": "",
+    "section": "Где еще можно встретить распределение Пуассона?",
+    "text": "Где еще можно встретить распределение Пуассона?"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Теория вероятностей и математическая статистика",
     "section": "",
-    "text": "Team\n\n\n    \n        \n            \n                \n                  \n                    \n                      Глеб Карпов\n                    \n                    Лектор\n                  \n                \n              \n        \n    \n\nНет подходящих элементов\n\n\n\nМатериалы\n📚 Перейти к материалам курса"
+    "text": "Лекции\nЛисты рекомендованных задач"
   }
 ]
