@@ -32,3 +32,8 @@
   number: 7
   section: Многомерные случайные величины
   lectures: /lectures/lecture_7.pdf
+
+- title: Непрерывные случайные величины. Плотность и функция распределения.
+  number: 8
+  section: Одномерные непрерывные случайные величины
+  lectures: /lectures/lecture_8.pdf
