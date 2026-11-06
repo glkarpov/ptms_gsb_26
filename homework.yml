@@ -17,3 +17,11 @@
 - title: Распределения Бернулли, биномиальное, Пуассона.
   number: 5
   problem_sets: /assignments/ha_topic_5.pdf
+
+- title: Многомерные случайные величины. Ковариация и корреляция.
+  number: 6
+  problem_sets: /assignments/ha_topic_6.pdf
+
+- title: Непрерывные случайные величины. Равномерное и экспоненциальное распределения.
+  number: 7
+  problem_sets: /assignments/ha_topic_7.pdf
