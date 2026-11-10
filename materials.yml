@@ -42,3 +42,8 @@
   number: 9
   section: Одномерные непрерывные случайные величины
   lectures: /lectures/lecture_9.pdf
+
+- title: Многомерное нормальное распределение. Центральная предельная теорема.
+  number: 10
+  section: Линейные комбинации случайных величин
+  lectures: /lectures/lecture_10.pdf
