@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-number','listing-section','listing-lectures',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-number','listing-section','listing-lectures','listing-download',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-title","listing-number","listing-section","listing-lectures"],
+      searchColumns: ["listing-title","listing-number","listing-section","listing-lectures","listing-download"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -262,7 +262,7 @@ window.Quarto = {
 
     <h3 class="anchored">Лекция 10</h3>
     <p>
-        <a href="./lectures/lecture_10.pdf">📄 Презентация</a>
+        <a href="./lectures/lecture_10.pdf">📄 Презентация</a> • <a href="https://colab.research.google.com/github/glkarpov/teaching.glkarpov.github.io/blob/main/prob_theory_shared/notebooks/clt.ipynb">🚀 Colab (EN)</a>
     </p>
     <p>Многомерное нормальное распределение. Центральная предельная теорема.</p>
 
