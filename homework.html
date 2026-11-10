@@ -208,6 +208,12 @@ window.Quarto = {
     </p>
     <p>Непрерывные случайные величины. Равномерное и экспоненциальное распределения.</p>
 
+    <h3 class="anchored">Лист задач 8</h3>
+    <p>
+        <a href="./assignments/ha_topic_8.pdf">📄 Задачи</a>
+    </p>
+    <p>Нормальное распределение.</p>
+
 <div class="listing-no-matching d-none">Нет подходящих элементов</div>
 </div>
 
@@ -287,7 +293,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/ptms-gsb\.edu\.glebkarpov\.com");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
