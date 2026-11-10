@@ -25,3 +25,7 @@
 - title: Непрерывные случайные величины. Равномерное и экспоненциальное распределения.
   number: 7
   problem_sets: /assignments/ha_topic_7.pdf
+
+- title: Нормальное распределение.
+  number: 8
+  problem_sets: /assignments/ha_topic_8.pdf
