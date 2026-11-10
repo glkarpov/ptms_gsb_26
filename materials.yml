@@ -47,3 +47,6 @@
   number: 10
   section: Линейные комбинации случайных величин
   lectures: /lectures/lecture_10.pdf
+  download:
+    - label: 🚀 Colab (EN)
+      url: https://colab.research.google.com/github/glkarpov/teaching.glkarpov.github.io/blob/main/prob_theory_shared/notebooks/clt.ipynb
