@@ -45,8 +45,16 @@
 
 - title: Многомерное нормальное распределение. Центральная предельная теорема.
   number: 10
-  section: Линейные комбинации случайных величин
+  section: Поведение линейных комбинаций случайных величин
   lectures: /lectures/lecture_10.pdf
   download:
     - label: 🚀 Colab (EN)
       url: https://colab.research.google.com/github/glkarpov/teaching.glkarpov.github.io/blob/main/prob_theory_shared/notebooks/clt.ipynb
+
+- title: Введение в задачу статистики. Точечные оценки и их свойства. Выборочное среднее.
+  number: 11
+  section: Точечные оценки
+  lectures: /lectures/lecture_11.pdf
+  download:
+    - label: 🚀 Colab (RU)
+      url: https://colab.research.google.com/github/glkarpov/teaching.glkarpov.github.io/blob/main/math_stat_shared/notebooks/sampling_distribution_ru.ipynb
