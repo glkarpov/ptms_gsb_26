@@ -1,6 +1,6 @@
 ---
 title: "Теория вероятностей и математическая статистика"
-subtitle: "Введение в задачу статистики. Точечные оценки и их свойства. Выборочное среднее."
+subtitle: "Введение в задачу статистики. Точечные оценки и их свойства. Выборочное среднее. Выборочная доля."
 institute: "Программы БИ, УЦП, ТАДвБ ВШБ ВШЭ."
 author: "Глеб Карпов"
 format: 
@@ -20,3 +20,5 @@ format:
 {{< include ../atoms/statistics/point_estimation.md >}}
 
 {{< include ../atoms/statistics/mean_point_estimator.md >}}
+
+{{< include ../atoms/statistics/proportion_estimator.md >}}
