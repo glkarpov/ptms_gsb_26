@@ -220,6 +220,12 @@ window.Quarto = {
     </p>
     <p>Центральная предельная теорема. Интегральная теорема Муавра–Лапласа.</p>
 
+    <h3 class="anchored">Лист задач 10</h3>
+    <p>
+        <a href="./assignments/ha_topic_10.pdf">📄 Задачи</a>
+    </p>
+    <p>Выборочные распределения и характеристики. Оценки и их свойства.</p>
+
 <div class="listing-no-matching d-none">Нет подходящих элементов</div>
 </div>
 
@@ -299,7 +305,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/ptms-gsb\.edu\.glebkarpov\.com");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
