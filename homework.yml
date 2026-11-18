@@ -33,3 +33,7 @@
 - title: Центральная предельная теорема. Интегральная теорема Муавра–Лапласа.
   number: 9
   problem_sets: /assignments/ha_topic_9.pdf
+
+- title: Выборочные распределения и характеристики. Оценки и их свойства.
+  number: 10
+  problem_sets: /assignments/ha_topic_10.pdf
