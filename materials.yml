@@ -58,3 +58,8 @@
   download:
     - label: 🚀 Colab (RU)
       url: https://colab.research.google.com/github/glkarpov/teaching.glkarpov.github.io/blob/main/math_stat_shared/notebooks/sampling_distribution_ru.ipynb
+
+- title: Методы точечной оценки. Метод моментов. MLE.
+  number: "12-13"
+  section: Точечные оценки
+  lectures: /lectures/lecture_12.pdf
